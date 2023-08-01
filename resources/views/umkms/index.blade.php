@@ -1,40 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Daftar UMKM</h1>
-    <a href="{{ route('umkms.create') }}" class="btn btn-primary mb-2">Tambah UMKM</a>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Nama</th>
-                <th>Deskripsi</th>
-                <th>Gambar UMKM</th>
-                <th>Gambar Produk</th>
-                <th>Aksi</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl md:text-5xl text-center font-bold mb-4">Daftar UMKM
+            <a href="{{ route('umkms.create') }}"
+            class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg mb-4">
+            Tambah UMKM
+        </a>
+        </h1>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             @foreach ($umkms as $umkm)
-                <tr>
-                    <td>{{ $umkm->nama_umkm }}</td>
-                    <td>{{ $umkm->deskripsi }}</td>
-                    <td><img src="{{ asset('/storage/' . $umkm->id . '/'. $umkm->gambar_umkm) }}" alt="{{ $umkm->nama_umkm }}" width="100">
-                    </td>
-                    <td>
-                        <img src="{{ asset('/storage/' . $umkm->id . '/'. $umkm->gambar_produk) }}" alt="{{ $umkm->nama_umkm }}" width="100">
-                    </td>
-                    <td>
-                        <a href="{{ route('umkms.show', $umkm) }}" class="btn btn-info btn-sm">Lihat</a>
-                        <a href="{{ route('umkms.edit', $umkm) }}" class="btn btn-primary btn-sm">Edit</a>
-                        <form action="{{ route('umkms.destroy', $umkm) }}" method="POST" class="d-inline">
+                <div class="border rounded-lg p-4">
+                    <div class="text-center mb-2">
+                        <img src="{{ asset('/storage/' . $umkm->id . '/' . $umkm->gambar_umkm) }}"
+                            alt="{{ $umkm->nama_umkm }}" class="w-24 h-24 object-cover rounded-lg mx-auto">
+                    </div>
+                    <div class="mb-2">
+                        <span class="font-semibold">Nama:</span>
+                        {{ $umkm->nama_umkm }}
+                    </div>
+                    <div class="mb-2">
+                        <span class="font-semibold">Deskripsi:</span>
+                        {{ $umkm->deskripsi }}
+                    </div>
+                    <div class="flex justify-center">
+                        <a href="{{ route('umkms.show', $umkm) }}"
+                            class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-1 px-2 rounded-lg mx-1">
+                            Lihat
+                        </a>
+                        <a href="{{ route('umkms.edit', $umkm) }}"
+                            class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-1 px-2 rounded-lg mx-1">
+                            Edit
+                        </a>
+                        <form action="{{ route('umkms.destroy', $umkm) }}" method="POST" class="inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm"
-                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</button>
+                            <button type="submit"
+                                class="inline-block bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-2 rounded-lg mx-1"
+                                onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                Hapus
+                            </button>
                         </form>
-                    </td>
-                </tr>
+                    </div>
+                </div>
             @endforeach
-        </tbody>
-    </table>
+        </div>
+    </div>
 @endsection

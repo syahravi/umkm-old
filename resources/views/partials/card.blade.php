@@ -8,7 +8,7 @@
                         src="{{ asset('storage/' . $umkm->id . '/'. $umkm->gambar_umkm) }}" alt="UMKM Image">
 
                     <div class="p-4">
-                        <p class="text-gray-600">{{ $umkm->deskripsi }}</p>
+                        <p class="text-gray-600 w-auto">{{ $umkm->deskripsi }}</p>
                     </div>
                 </div>
             @endforeach

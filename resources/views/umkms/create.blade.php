@@ -24,6 +24,7 @@
                 class="bg-white shadow rounded-lg px-8 py-6 space-y-4">
                 @csrf
                 <div class="flex flex-col">
+                    <h1 class="text-3xl text-center  mb-6">Tambah UMKM</h1>
                     <label for="nama" class="text-sm font-medium text-gray-700">Nama UMKM</label>
                     <input type="text" name="nama_umkm" id="nama"
                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('nama') border-red-500 @enderror"
@@ -60,7 +61,7 @@
                     @enderror
                 </div>
                 <div class="flex justify-center items-center">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400 text-white font-medium rounded-lg text-base px-8 py-4">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400 text-white font-medium rounded-lg text-base px-8 py-4 w-full">
                         Simpan
                     </button>
                 </div>

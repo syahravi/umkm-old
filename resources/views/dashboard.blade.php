@@ -2,12 +2,12 @@
 
 @section('content')
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 class="font-semibold text-xl text-gray-800  leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
 
-    <nav class="bg-white dark:bg-gray-800 p-4">
+    <nav class="bg-white  p-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-end space-x-4">
                 <a href="{{ route('umkms.index') }}"
@@ -33,7 +33,7 @@
                         src="{{ asset('storage/' . $umkm->id . '/'. $umkm->gambar_umkm) }}" alt="{{ $umkm->nama_umkm }} Image">
 
                         <div class="p-4">
-                            <p class="text-gray-600">{{ $umkm->deskripsi }}</p>
+                            <p class="text-gray-600 w-auto">{{ $umkm->deskripsi }}</p>
                         </div>
                     </div>
                 @endforeach
