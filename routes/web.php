@@ -8,6 +8,9 @@ use App\Http\Controllers\DashboardController;
 
 // Rute untuk halaman welcome
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/single', function () {
+    return view('single');
+});
 
 // Rute dashboard dan profil yang hanya dapat diakses oleh pengguna yang telah masuk (autentikasi).
 Route::middleware(['auth', 'verified'])->group(function () {
