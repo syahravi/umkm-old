@@ -1,4 +1,4 @@
-<section class="py-10  bg-gray-50 sm:py-16 lg:py-24">
+<section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
     <div class="px-4  mt-16 mx-auto max-w-8xl sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="tracking-wide  mt-6 text-4xl font-bold leading-10 w-full text-black sm:text-6xl lg:text-7xl py-4">
@@ -13,13 +13,13 @@
                 untuk
                 mendukung dan memperkuat Usaha Mikro, Kecil, dan Menengah UMKM yang berlokasi di Desa Cimulang. </p>
             <div class="flex justify-center space-x-4">
-                <a href="#"
+                <a href="/info_umkm"
                     class="text-white bg-blue-500 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400  font-medium rounded-lg text-base px-8 py-4 text-center mr-2 mb-2">
-                    Purple to Blue
+                    Info UMKM
                 </a>
-                <a href="#"
+                <a href="https://api.whatsapp.com/qr/6KCVZL7AK5K5L1?autoload=1&app_absent=0"
                     class="text-white bg-slate-950 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-800  font-medium rounded-lg text-base px-8 py-4 text-center mr-2 mb-2">
-                    Purple to Blue
+                    Butuh Bantuan
                 </a>
             </div>
         </div>

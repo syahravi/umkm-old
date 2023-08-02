@@ -5,13 +5,14 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UMKMController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InfoUmkm;
 
 // Rute untuk halaman welcome
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 Route::get('/single', function () {
     return view('single');
 });
-
+Route::get('/info_umkm', [InfoUmkm::class, 'index'])->name('infoumkm');
 // Rute dashboard dan profil yang hanya dapat diakses oleh pengguna yang telah masuk (autentikasi).
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
