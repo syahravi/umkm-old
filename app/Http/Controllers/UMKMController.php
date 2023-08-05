@@ -12,12 +12,12 @@ class UMKMController extends Controller
     public function index()
     {
         $umkms = UMKM::all();
-        return view('umkms.index', compact('umkms'));
+        return view('admin.umkm.index', compact('umkms'));
     }
 
     public function create()
     {
-        return view('umkms.create');
+        return view('admin.umkm.create');
     }
 
     public function store(Request $request)
@@ -59,12 +59,12 @@ class UMKMController extends Controller
 
     public function show(UMKM $umkm)
     {
-        return view('umkms.show', compact('umkm'));
+        return view('admin.umkm.show', compact('umkm'));
     }
 
     public function edit(UMKM $umkm)
     {
-        return view('umkms.edit', compact('umkm'));
+        return view('admin.umkm.edit', compact('umkm'));
     }
 
     public function update(Request $request, UMKM $umkm)
@@ -117,6 +117,6 @@ class UMKMController extends Controller
     {
         $umkm->delete();
 
-        return redirect()->route('umkms.index')->with('success', 'Data UMKM berhasil dihapus!');
+        return redirect()->route('admin.umkm.index')->with('success', 'Data UMKM berhasil dihapus!');
     }
 }
