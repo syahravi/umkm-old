@@ -17,7 +17,7 @@ Route::get('/single', function () {
 Route::get('/info_umkm', [InfoUmkm::class, 'index'])->name('infoumkm');
 // Rute dashboard dan profil yang hanya dapat diakses oleh pengguna yang telah masuk (autentikasi).
 
-Route::middleware(['auth', 'verified', 'isAdmin'])->prefix('admin')->group(function () {
+Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
