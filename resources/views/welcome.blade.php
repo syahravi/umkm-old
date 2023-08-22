@@ -15,7 +15,7 @@
             </div>
             <div class="grid items-center grid-cols-1 mt-12 gap-y-10 lg:grid-cols-5 sm:mt-20 lg:flex justify-center">
                 <div class="lg:col-span-3">
-                    <img class="w-full mx-auto rounded-lg shadow-xl" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/7/dashboard-screenshot.png" alt="" />
+                    <img class="w-full mx-auto rounded-lg shadow-xl" src="{{asset('images/pusat umkm desa cimulang.webp')}}" alt="" />
                 </div>
             </div>
         </div>
