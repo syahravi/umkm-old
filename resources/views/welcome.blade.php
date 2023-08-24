@@ -1,10 +1,10 @@
 <x-guest-layout>
-    {{-- @include('partials.navigation') --}}
+    @include('partials.nafvigasi')
     {{-- *Landing --}}
-    <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
-        <div class="px-4  mt-16 mx-auto max-w-8xl sm:px-6 lg:px-8">
+    <section class="sm:py-16 lg:py-24">
+        <div class="px-4   max-w-8xl sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center">
-                <h2 class="tracking-wide  mt-6 text-4xl font-bold leading-10 w-full text-black sm:text-6xl lg:text-7xl py-4"> Selamat Datang di <span class="block lg:mt-3">Website UMKM</span>
+                <h2 class="tracking-wide   text-4xl font-bold leading-10 w-full text-black sm:text-6xl lg:text-7xl py-4"> Selamat Datang di <span class="block lg:mt-3">Website UMKM</span>
                     <span class="block h-24 lg:mt-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">Desa Cimulang</span>
                 </h2>
                 <p class="my-4 mb-7  text-lg text-gray-600">Website ini adalah sebuah platform digital yang bertujuan untuk mendukung dan memperkuat Usaha Mikro, Kecil, dan Menengah UMKM yang berlokasi di Desa Cimulang. </p>
