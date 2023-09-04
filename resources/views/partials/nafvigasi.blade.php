@@ -28,17 +28,17 @@
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"> Home
                 </a>
 
-                <a href="#hero" title=""
+                <a href="#tentangkami" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
                     Tentang </a>
 
-                <a href="#umkm" title=""
+                <a href="#produk" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"> Produk
                     Umkm</a>
 
-                <a href="#" title=""
+                <a href="#hubungikami" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
-                    Hubungi kami </a>
+                    Hubungi Kami </a>
 
                 <div class="w-px h-5 bg-black/20"></div>
 

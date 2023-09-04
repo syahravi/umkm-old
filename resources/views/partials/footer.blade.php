@@ -1,32 +1,28 @@
-<<section class="py-12 bg-gradient-to-r from-fuchsia-600 to-blue-600">
+<<section class="py-12 bg-gradient-to-r from-blue-600 to-teal-600">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center xl:flex xl:items-center xl:justify-between xl:text-left">
             <div class="xl:flex xl:items-center xl:justify-start">
-                <img class="w-auto mx-auto h-7" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo-alt-2.svg" alt="" />
+                <img class="w-auto mx-auto h-7" src="{{asset('images/LOGOUMKM.png')}}" alt="umkm cimulang" />
 
-                <p class="mt-5 text-sm text-white xl:ml-6 xl:mt-0">© Copyright 2021 Postcraft</p>
+                <p class="mt-5 text-sm text-white xl:ml-6 xl:mt-0">© Hak Cipta 2021 Umkm Cimulang</p>
             </div>
 
             <div class="items-center mt-8 xl:mt-0 xl:flex xl:justify-end xl:space-x-8">
                 <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 xl:justify-end">
                     <li>
-                        <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> About </a>
+                        <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Home </a>
                     </li>
 
                     <li>
-                        <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Services </a>
+                        <a href="#tentangkami" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Tentang Kami </a>
                     </li>
 
                     <li>
-                        <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Privacy Policy </a>
+                        <a href="#produk" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Produk Umkm </a>
                     </li>
 
                     <li>
-                        <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Terms & Conditions </a>
-                    </li>
-
-                    <li>
-                        <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Support </a>
+                        <a href="#gubungikami" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Hubungi Kami </a>
                     </li>
                 </ul>
 
