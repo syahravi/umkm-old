@@ -12,7 +12,7 @@ class UMKMController extends Controller
     public function index()
     {
         $umkms = UMKM::all();
-        return view('admin.umkm.index', compact('umkms'));
+        return view('umkm.index', compact('umkms'));
     }
 
     public function create()
