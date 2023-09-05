@@ -24,27 +24,27 @@
             </button>
 
             <div class="hidden ml-auto lg:flex lg:items-center lg:justify-center lg:space-x-10">
-                <a href="#" title=""
-                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"> Home
+                <a href="/" title=""
+                    class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"> Beranda
                 </a>
 
-                <a href="#tentangkami" title=""
+                <a href="/#tentangkami" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
                     Tentang </a>
 
-                <a href="#produk" title=""
+                <a href="/#produk" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"> Produk
-                    Umkm</a>
+                    UMKM</a>
 
                 <a href="#hubungikami" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80">
                     Hubungi Kami </a>
-
+{{-- 
                 <div class="w-px h-5 bg-black/20"></div>
 
                 <a href="{{ route('login') }}" title=""
                     class="text-base font-semibold text-black transition-all duration-200 hover:text-opacity-80"> Masuk
-                </a>
+                </a> --}}
             </div>
         </div>
     </div>
