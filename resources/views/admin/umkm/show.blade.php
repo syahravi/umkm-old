@@ -10,7 +10,7 @@
             <p class="mt-2 ">keterangan :{{ $umkm->deskripsi }}</p>
         </div>
         <img src="{{ asset('/storage/' . $umkm->id . '/' . $umkm->gambar_umkm) }}" alt="{{ $umkm->nama_umkm }}"
-            class="w-full h-48 object-cover object-center rounded-t-lg">
+            class="w-full object-cover object-center rounded-t-lg">
     </div>
     <div class="justify-center items-center mt-3">
 
