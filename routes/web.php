@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Admin\UMKMController;
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InfoUmkm;
 
 // Rute untuk halaman welcome
@@ -15,27 +13,43 @@ Route::get('/single', function () {
 });
 
 Route::get('/info_umkm', [InfoUmkm::class, 'index'])->name('infoumkm');
-// Rute dashboard dan profil yang hanya dapat diakses oleh pengguna yang telah masuk (autentikasi).
 
-Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    // *UMKM
-    // Rute untuk tampilan UMKM yang dapat diakses oleh pengguna tanpa harus login.
-    Route::get('umkm', [UMKMController::class, 'index'])->name('umkms.index');
-
-	Route::get('umkm/create', [UMKMController::class, 'create'])->name('umkms.create');
-
-    // Rute untuk menampilkan detail UMKM
-    Route::get('umkm/{umkm}', [UMKMController::class, 'show'])->name('umkms.show');
-
-	Route::get('umkm/{umkm}/edit', [UMKMController::class, 'edit'])->name('umkms.edit');
-	Route::delete('umkm/{umkm}', [UMKMController::class, 'destroy'])->name('umkms.destroy');
-	Route::post('v1/umkm/store', [UMKMController::class, 'store'])->name('umkms.store');
-	Route::post('v1/umkm/edit', [UMKMController::class, 'update'])->name('umkms.update');
+Route::group([
+    'prefix' => 'UMKM',
+    'as' => 'umkm.',
+    'namespace' => 'App\Http\Controllers',
+], function () {
+    Route::controller(UMKMController::class)->group(function (){
+        Route::get('/', 'index')->name('index');
+    });
 });
+
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'admin',
+    'as' => 'admin.',
+    'namespace' => 'App\Http\Controllers\Admin',
+], function () {
+    Route::controller(DashboardController::class)->group(function (){
+        Route::get('dashboard', 'index')->name('dashboard');
+    });
+
+    Route::controller(UMKMController::class)->prefix('UMKM')->group(function (){
+        Route::get('/', 'index')->name('umkm.index');
+        Route::get('{umkm_id}', 'show')->name('umkm.show');
+        Route::get('buat', 'create')->name('umkm.create');
+
+        Route::get('{umkm_id}/edit', 'edit')->name('umkm.edit');
+        Route::delete('{umkm}/hapus', 'destroy')->name('umkm.destroy');
+        Route::post('v1/store', 'store')->name('umkm.store');
+        Route::post('update', 'update')->name('umkm.update');
+    });
+});
+
+// Route::middleware(['auth', 'verified'])->prefix('admin')->group(function () {
+//     Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
+//     Route::patch('profile', [ProfileController::class, 'update'])->name('profile.update');
+//     Route::delete('profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+// });
 
 require __DIR__ . '/auth.php';
