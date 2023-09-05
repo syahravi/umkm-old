@@ -3,7 +3,7 @@
 @section('content')
     <div class="container mx-auto py-8">
         <h1 class="text-3xl md:text-5xl text-center font-bold mb-4">Daftar UMKM
-            <a href="{{ route('umkms.create') }}"
+            <a href="{{ route('admin.umkm.create') }}"
             class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg mb-4">
             Tambah UMKM
         </a>
@@ -25,15 +25,15 @@
                         {{ $umkm->deskripsi }}
                     </div>
                     <div class="flex justify-center">
-                        <a href="{{ route('umkms.show', $umkm) }}"
+                        <a href="{{ route('admin.umkm.show', $umkm) }}"
                             class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-1 px-2 rounded-lg mx-1">
                             Lihat
                         </a>
-                        <a href="{{ route('umkms.edit', $umkm) }}"
+                        <a href="{{ route('admin.umkm.edit', $umkm) }}"
                             class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-1 px-2 rounded-lg mx-1">
                             Edit
                         </a>
-                        <form action="{{ route('umkms.destroy', $umkm) }}" method="POST" class="inline">
+                        <form action="{{ route('admin.umkm.destroy', $umkm) }}" method="POST" class="inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit"

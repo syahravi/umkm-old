@@ -1,5 +1,4 @@
 <x-guest-layout>
-    @include('partials.nafvigasi')
     {{-- *Landing --}}
     <section class="sm:py-16 lg:py-24">
         <div class="px-4 max-w-8xl sm:px-6 lg:px-8">

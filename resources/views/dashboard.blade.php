@@ -10,11 +10,11 @@
     <nav class="bg-white  p-4">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-end space-x-4">
-                <a href="{{ route('umkms.index') }}"
+                <a href="{{ route('admin.umkm.index') }}"
                     class="text-white bg-blue-500 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-base px-8 py-4 text-center">
                     UMKM List
                 </a>
-                <a href="{{ route('umkms.create') }}"
+                <a href="{{ route('admin.umkm.create') }}"
                     class="text-white bg-green-500 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-400 font-medium rounded-lg text-base px-8 py-4 text-center">
                     Add UMKM
                 </a>

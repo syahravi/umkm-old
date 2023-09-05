@@ -1,4 +1,4 @@
-<!-- resources/views/umkms/show.blade.php -->
+<!-- resources/views/admin.umkm/show.blade.php -->
 
 @extends('layouts.app')
 
@@ -14,7 +14,7 @@
     </div>
     <div class="justify-center items-center mt-3">
 
-        <a href="{{ route('umkms.index') }}"
+        <a href="{{ route('admin.umkm.index') }}"
             class="inline-block px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">Kembali</a>
     </div>
 @endsection
