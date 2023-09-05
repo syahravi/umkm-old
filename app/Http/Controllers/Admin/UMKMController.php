@@ -1,25 +1,34 @@
 <?php
-// app/Http/Controllers/UMKMController.php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\UMKM;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class UMKMController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $umkms = UMKM::all();
         return view('admin.umkm.index', compact('umkms'));
     }
 
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
         return view('admin.umkm.create');
     }
 
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         $request->validate([
@@ -46,27 +55,28 @@ class UMKMController extends Controller
         $umkm->gambar_produk = $gambar_produkName;
         $umkm->save();
 
-        // $input = $request->all();
-
-        // Upload gambar_umkm dan gambar_produk ke direktori storage/public/umkms
-        // $input['gambar_umkm'] = $request->file('gambar_umkm')->store('umkms', 'public');
-        // $input['gambar_produk'] = $request->file('gambar_produk')->store('umkms', 'public');
-
-        // UMKM::create($input);
-
         return redirect()->back();
     }
 
+    /**
+     * Display the specified resource.
+     */
     public function show(UMKM $umkm)
     {
         return view('admin.umkm.show', compact('umkm'));
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     */
     public function edit(UMKM $umkm)
     {
         return view('admin.umkm.edit', compact('umkm'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     */
     public function update(Request $request, UMKM $umkm)
     {
         $request->validate([
@@ -96,23 +106,12 @@ class UMKMController extends Controller
         
         $umkm->save();
 
-        // $input = $request->all();
-
-        // // Jika ada gambar_umkm baru, upload dan hapus gambar lama
-        // if ($request->hasFile('gambar_umkm')) {
-        //     $input['gambar_umkm'] = $request->file('gambar_umkm')->store('umkms', 'public');
-        // }
-
-        // // Jika ada gambar_produk baru, upload dan hapus gambar lama
-        // if ($request->hasFile('gambar_produk')) {
-        //     $input['gambar_produk'] = $request->file('gambar_produk')->store('umkms', 'public');
-        // }
-
-        // $umkm->update($input);
-
         return redirect()->back();
     }
 
+    /**
+     * Remove the specified resource from storage.
+     */
     public function destroy(UMKM $umkm)
     {
         $umkm->delete();
