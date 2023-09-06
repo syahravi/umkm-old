@@ -1,4 +1,6 @@
-<x-guest-layout>
+@extends('layouts.guest-auth')
+
+@section('content')
     <section class="container mx-auto rounded-lg ">
         <div class="grid grid-cols-1 lg:grid-cols-2 ">
             <!-- Gambar di sisi kiri -->
@@ -57,4 +59,4 @@
               </div>              
         </div>
     </section>
-</x-guest-layout>
+@endsection
