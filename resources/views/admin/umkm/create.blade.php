@@ -6,11 +6,11 @@
     <div class="bg-blue-500 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-end space-x-4">
-                <a href="{{ route('umkms.index') }}"
+                <a href="{{ route('admin.umkm.index') }}"
                     class="inline-block bg-blue-500 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400 text-white font-medium rounded-lg text-base px-8 py-4">
                     UMKM List
                 </a>
-                <a href="{{ route('umkms.create') }}"
+                <a href="{{ route('admin.umkm.create') }}"
                     class="inline-block bg-green-500 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-400 text-white font-medium rounded-lg text-base px-8 py-4">
                     Add UMKM
                 </a>
@@ -20,7 +20,7 @@
 
     <div class="py-10 bg-gray-100">
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <form action="{{ route('umkms.store') }}" method="POST" enctype="multipart/form-data"
+            <form action="{{ route('admin.umkm.store') }}" method="POST" enctype="multipart/form-data"
                 class="bg-white shadow rounded-lg px-8 py-6 space-y-4">
                 @csrf
                 <div class="flex flex-col">
