@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">
                 <a href="/" title="" class="flex">
-                    <img class="w-auto h-8" src="{{ asset('images/LOGOUMKM.png') }}" alt="cimulang" />
+                    <img class="w-auto h-14" src="{{ asset('images/umkmm.png') }}" alt="cimulang" />
                 </a>
             </div>
 

@@ -1,10 +1,10 @@
-<<section class="py-12 bg-gradient-to-r from-blue-600 to-teal-600">
+<<section class="py-12 bg-gradient-to-r  from-slate-100 to-blue-600">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center xl:flex xl:items-center xl:justify-between xl:text-left">
             <div class="xl:flex xl:items-center xl:justify-start">
-                <img class="w-auto mx-auto h-7" src="{{asset('images/LOGOUMKM.png')}}" alt="umkm cimulang" />
+                <img class="w-auto mx-auto h-10" src="{{asset('images/umkmm.png')}}" alt="umkm cimulang" />
 
-                <p class="mt-5 text-sm text-white xl:ml-6 xl:mt-0">© Hak Cipta 2021 Umkm Cimulang</p>
+                <p class="mt-5 text-sm text-dark xl:ml-6 xl:mt-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">© Hak Cipta 2021 Umkm Cimulang</p>
             </div>
 
             <div class="items-center mt-8 xl:mt-0 xl:flex xl:justify-end xl:space-x-8">
