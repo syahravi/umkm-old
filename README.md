@@ -21,7 +21,7 @@
         -   index
             -   kasih header/hero sebelum list umkm desa cimulang {ok}
         -   show
-            -   perbaiki view berdasarkan kontroler
+            -   perbaiki view berdasarkan kontroler {ok}
     -   dashboard
         -   Menampilkan jumlah umkm dll. (Referensi: [Stats](https://www.tailbits.com/components/stats))
     -   admin/umkm

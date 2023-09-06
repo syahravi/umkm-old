@@ -1,4 +1,4 @@
-<header class="fixed w-full bg-white shadow-md">
+<header class="fixed z-50 w-full bg-white shadow-md">
     <div class="px-4 mx-auto sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
             <div class="flex-shrink-0">

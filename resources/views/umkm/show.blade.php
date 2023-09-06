@@ -1,8 +1,10 @@
 <x-guest-layout>
     {{-- ha;lamn lending utama --}}
-    <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32">
+    <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32 ">
         <div class="absolute inset-0">
-            <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left" src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/5/girl-working-on-laptop.jpg" alt="" />
+            <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left"
+             {{--ambil gambar dari gambar umkm  --}}
+            src="{{asset('images/pusat umkm desa cimulang.webp')}}" alt="" />
         </div>
     
         <div class="absolute inset-0 hidden bg-gradient-to-r md:block from-black to-transparent"></div>
@@ -10,71 +12,12 @@
         <div class="absolute inset-0 block bg-black/60 md:hidden"></div>
     
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+            {{-- @foreach ($umkms as $umkm) --}}
             <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
-                <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">Get full access to Celebration</h2>
-                <p class="mt-4 text-base text-gray-200">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam.</p>
-    
-                <form action="#" method="POST" class="mt-8 lg:mt-12">
-                    <div class="flex flex-col items-center sm:flex-row sm:justify-center">
-                        <div class="flex-1 w-full min-w-0 px-4 sm:px-0">
-                            <div class="relative text-gray-400 focus-within:text-gray-600">
-                                <label for="email" class="sr-only"></label>
-                                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                                    </svg>
-                                </div>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Enter email address"
-                                    class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-                                    required
-                                />
-                            </div>
-                        </div>
-    
-                        <button type="submit" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-blue-700 focus:bg-blue-700">
-                            Get instant access
-                        </button>
-                    </div>
-                </form>
+                <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">JUDUL_UMKM_></h2>
+                <p class="mt-4 text-base text-gray-200">deskripsi lengkap</p>
             </div>
-        </div>
-    </section>
-       {{-- halan deskripsi produk yang di ambil dari deskripsi produk --}}
-    <section class="py-10 bg-white sm:py-16 lg:py-24">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="flex-1 text-center lg:text-center mb-5">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Latest from blog</h2>
-            </div>
-            <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-24 gap-y-12">
-                <div class="relative lg:mb-12">
-                    <img class="absolute -right-0 -bottom-8 xl:-bottom-12 xl:-right-4" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/dots-pattern.svg" alt="" />
-                    <div class="pl-12 pr-6">
-                        <img class="relative" src="https://cdn.rareblocks.xyz/collection/celebration/images/content/3/girl-working-on-laptop.jpg" alt="" />
-                    </div>
-                    <div class="absolute left-0 pr-12 bottom-8 xl:bottom-20">
-                        <div class="max-w-xs bg-blue-600 rounded-lg sm:max-w-md xl:max-w-md">
-                            <div class="px-3 py-4 sm:px-5 sm:py-8">
-                                <div class="flex items-start">
-                                    <p class="text-3xl sm:text-4xl">👋</p>
-                                    <blockquote class="ml-5">
-                                        <p class="text-sm font-medium text-white sm:text-lg">“You made it so simple. My new site is so much faster and easier to work with than my old site.”</p>
-                                    </blockquote>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="2xl:pl-16">
-                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">We make things easy for projects.</h2>
-                    <p class="text-xl leading-relaxed text-gray-900 mt-9">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia conse duis enim velit mollit. Exercitation veniam.</p>
-                    <p class="mt-6 text-xl leading-relaxed text-gray-900">Velit officia conse duis enim velit mollit. Exercit ation veniam consequat sunt nostrud amet.</p>
-                </div>
-            </div>
+            {{-- @endforeach --}}
         </div>
     </section>
     {{-- halaman card untuk membuat menu atau tampilan produk --}}
@@ -82,11 +25,10 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="flex items-end justify-between">
                 <div class="flex-1 text-center lg:text-left">
-                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Latest from blog</h2>
-                    <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600 lg:mx-0">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Daftar Produk</h2>
                 </div>
     
-                <div class="hidden lg:flex lg:items-center lg:space-x-3">
+                {{-- <div class="hidden lg:flex lg:items-center lg:space-x-3">
                     <button type="button" class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white">
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -98,7 +40,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
-                </div>
+                </div> --}}
             </div>
     
             <div class="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
@@ -108,88 +50,19 @@
                             <a href="#" title="" class="block aspect-w-4 aspect-h-3">
                                 <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-1.jpg" alt="" />
                             </a>
-    
-                            <div class="absolute top-4 left-4">
-                                <span class="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full"> Lifestyle </span>
-                            </div>
                         </div>
-                        <span class="block mt-6 text-sm font-semibold tracking-widest text-gray-500 uppercase"> March 21, 2020 </span>
                         <p class="mt-5 text-2xl font-semibold">
-                            <a href="#" title="" class="text-black"> How to build coffee inside your home in 5 minutes. </a>
+                            <a href="#" title="" class="text-black">Nama Produk</a>
                         </p>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                        <a href="#" title="" class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
-                            Continue Reading
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
+                        <p class="mt-4 text-base text-gray-600">Deskripsi produk</p>
+                        
+                        <!-- Harga dan Sisa Produk -->
+                        <div class="flex items-center justify-between mt-4">
+                            <p class="text-xl font-semibold text-gray-800">Harga: $99</p>
+                            <p class="text-lg text-gray-600">Sisa Produk: 10</p>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="overflow-hidden bg-white rounded shadow">
-                    <div class="p-5">
-                        <div class="relative">
-                            <a href="#" title="" class="block aspect-w-4 aspect-h-3">
-                                <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-2.jpg" alt="" />
-                            </a>
-    
-                            <div class="absolute top-4 left-4">
-                                <span class="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full"> Marketing </span>
-                            </div>
-                        </div>
-                        <span class="block mt-6 text-sm font-semibold tracking-widest text-gray-500 uppercase"> April 04, 2020 </span>
-                        <p class="mt-5 text-2xl font-semibold">
-                            <a href="#" title="" class="text-black"> Ho7 Tips to run your remote team faster and better. </a>
-                        </p>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                        <a href="#" title="" class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
-                            Continue Reading
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-    
-                <div class="overflow-hidden bg-white rounded shadow">
-                    <div class="p-5">
-                        <div class="relative">
-                            <a href="#" title="" class="block aspect-w-4 aspect-h-3">
-                                <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-3.jpg" alt="" />
-                            </a>
-    
-                            <div class="absolute top-4 left-4">
-                                <span class="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full"> Productivity </span>
-                            </div>
-                        </div>
-                        <span class="block mt-6 text-sm font-semibold tracking-widest text-gray-500 uppercase"> May 12, 2020 </span>
-                        <p class="mt-5 text-2xl font-semibold">
-                            <a href="#" title="" class="text-black"> 5 Productivity tips to write faster at morning. </a>
-                        </p>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                        <a href="#" title="" class="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-blue-600 transition-all duration-200 border-b-2 border-transparent hover:border-blue-600 focus:border-blue-600">
-                            Continue Reading
-                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="flex items-center justify-center mt-8 space-x-3 lg:hidden">
-                <button type="button" class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-    
-                <button type="button" class="flex items-center justify-center text-gray-400 transition-all duration-200 bg-transparent border border-gray-300 rounded w-9 h-9 hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
             </div>
         </div>
     </section>
@@ -198,42 +71,22 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="text-center xl:flex xl:items-center xl:justify-between xl:text-left">
                 <div class="xl:flex xl:items-center xl:justify-start">
-                    <img class="w-auto mx-auto h-7" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo-alt-2.svg" alt="" />
+                    <img class="w-auto mx-auto h-7" src="{{asset('images/LOGOUMKM.png')}}" alt="" />
     
-                    <p class="mt-5 text-sm text-white xl:ml-6 xl:mt-0">© Copyright 2021 Postcraft</p>
+                    <p class="mt-5 text-sm text-white xl:ml-6 xl:mt-0">© Copyright 2021 umkm cimulang</p>
                 </div>
     
                 <div class="items-center mt-8 xl:mt-0 xl:flex xl:justify-end xl:space-x-8">
-                    <ul class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 xl:justify-end">
-                        <li>
-                            <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> About </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Services </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Privacy Policy </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Terms & Conditions </a>
-                        </li>
-    
-                        <li>
-                            <a href="#" title="" class="text-sm text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80"> Support </a>
-                        </li>
-                    </ul>
     
                     <div class="w-full h-px mt-8 mb-5 xl:w-px xl:m-0 xl:h-6 bg-gray-50/20"></div>
     
                     <ul class="flex items-center justify-center space-x-8 xl:justify-end">
                         <li>
                             <a href="#" title="" class="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
-                              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M21.57 6.016c-.213-1.589-.841-2.817-1.924-3.886C18.26.559 15.72.035 12 .035c-3.719 0-6.26.524-7.647 1.095-1.084 1.07-1.712 2.297-1.924 3.886-.16 1.196-.26 3.006-.26 4.914s.1 3.718.26 4.915c.213 1.589.84 2.817 1.924 3.886C5.74 23.441 8.28 23.965 12 23.965c3.719 0 6.26-.524 7.647-1.094 1.084-1.07 1.712-2.297 1.924-3.886.16-1.197.26-3.007.26-4.915s-.1-3.718-.26-4.914zm-10.57 9.446V8.537l6.454 3.465-6.454 3.466z"/>
-                              </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" x="0px" y="0px"  viewBox="0,0,256,256"
+                                style="fill:#000000;">
+                                <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M24.40234,9c-6.60156,0 -12.80078,0.5 -16.10156,1.19922c-2.19922,0.5 -4.10156,2 -4.5,4.30078c-0.39844,2.39844 -0.80078,6 -0.80078,10.5c0,4.5 0.39844,8 0.89844,10.5c0.40234,2.19922 2.30078,3.80078 4.5,4.30078c3.50391,0.69922 9.5,1.19922 16.10156,1.19922c6.60156,0 12.59766,-0.5 16.09766,-1.19922c2.20313,-0.5 4.10156,-2 4.5,-4.30078c0.40234,-2.5 0.90234,-6.09766 1,-10.59766c0,-4.5 -0.5,-8.10156 -1,-10.60156c-0.39844,-2.19922 -2.29687,-3.80078 -4.5,-4.30078c-3.5,-0.5 -9.59766,-1 -16.19531,-1zM24.40234,11c7.19922,0 12.99609,0.59766 15.79688,1.09766c1.5,0.40234 2.69922,1.40234 2.89844,2.70313c0.60156,3.19922 1,6.60156 1,10.10156c-0.09766,4.29688 -0.59766,7.79688 -1,10.29688c-0.29687,1.89844 -2.29687,2.5 -2.89844,2.70313c-3.60156,0.69922 -9.60156,1.19531 -15.60156,1.19531c-6,0 -12.09766,-0.39844 -15.59766,-1.19531c-1.5,-0.40234 -2.69922,-1.40234 -2.89844,-2.70312c-0.80078,-2.80078 -1.10156,-6.5 -1.10156,-10.19922c0,-4.60156 0.40234,-8 0.80078,-10.09766c0.30078,-1.90234 2.39844,-2.50391 2.89844,-2.70312c3.30078,-0.69922 9.40234,-1.19922 15.70313,-1.19922zM19,17v16l14,-8zM21,20.40234l8,4.59766l-8,4.59766z"></path></g></g>
+                                </svg>
                             </a>
                           </li>                                                                           
                         <li>
