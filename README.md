@@ -1,4 +1,5 @@
-## Laravel 
+# UMKM Desa Cimulang (Laravel)
+## Laravel
 - Instalasi Laravel
   - copy file .env.local ke .env
   - composer install
@@ -30,3 +31,8 @@
       - bisa edit dan hapus produk
     - edit
       - halaman edit umkm ambil berdasarkan halaman buat umkm
+    - produk
+      - index
+        - menampilkan daftar produk dari umkm
+      - create
+        - membuat produk baru (nama produk, deskripsi produk, jumlah produk, harga produk, gambar produk)
