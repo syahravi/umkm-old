@@ -14,6 +14,14 @@ class UMKMController extends Controller
         $umkms = UMKM::all();
         return view('umkm.index', compact('umkms'));
     }
+    public function show($umkm_id)
+    {
+        $umkm = UMKM::findOrFail($umkm_id);
+        $data = [
+            'umkm_id'=> $umkm,
+        ];
+        return view('umkm.show', $data);
+    }
 
     public function create()
     {
@@ -55,11 +63,6 @@ class UMKMController extends Controller
         // UMKM::create($input);
 
         return redirect()->back();
-    }
-
-    public function show(UMKM $umkm)
-    {
-        return view('admin.umkm.show', compact('umkm'));
     }
 
     public function edit(UMKM $umkm)
