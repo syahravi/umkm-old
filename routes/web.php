@@ -37,8 +37,9 @@ Route::group([
 
     Route::controller(UMKMController::class)->prefix('UMKM')->group(function (){
         Route::get('/', 'index')->name('umkm.index');
-        Route::get('{umkm_id}', 'show')->name('umkm.show');
         Route::get('buat', 'create')->name('umkm.create');
+        Route::get('{umkm_id}', 'show')->name('umkm.show');
+
 
         Route::get('{umkm_id}/edit', 'edit')->name('umkm.edit');
         Route::delete('{umkm}/hapus', 'destroy')->name('umkm.destroy');
