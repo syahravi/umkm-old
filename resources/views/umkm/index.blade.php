@@ -16,7 +16,7 @@
             </h1>
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach ($umkms as $umkm)
-                    <a href=""
+                    <a href="{{ route('umkm.show', [$umkm->id, $umkm->nama_umkm]) }}"
                         class="bg-white rounded-lg shadow-md p-3 transition-transform transform hover:text-white hover:bg-blue-200 hover:-translate-y-2 hover:shadow-lg">
                         <h2 class="text-xl font-bold text-gray-800 mb-2 text-center">{{ $umkm->nama_umkm }}</h2>
                         <img class="w-full h-56 object-cover rounded-t-lg mt-4"

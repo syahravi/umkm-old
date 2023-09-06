@@ -13,7 +13,7 @@
                     untuk mendukung dan memperkuat Usaha Mikro, Kecil, dan Menengah UMKM yang berlokasi di Desa
                     Cimulang. </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="/info_umkm"
+                    <a href="{{ route('umkm.index') }}"
                         class="px-8 py-4 mb-2 mr-2 text-base font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
                         Info UMKM </a>
                     <a href="https://api.whatsapp.com/qr/6KCVZL7AK5K5L1?autoload=1&app_absent=0"
@@ -61,7 +61,7 @@
             <h1
                 class="flex flex-col mb-4 text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 md:flex-row md:items-center">
                 Daftar UMKM
-                <a href="/info_umkm"
+                <a href="{{ route('umkm.index')}}"
                     class="flex items-center mx-auto mt-2 text-sm text-blue-500 underline sm:text-center md:mt-0 md:ml-4">
                     Lihat Selengkapnya
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1 -mr-1" viewBox="0 0 20 20"
@@ -74,7 +74,7 @@
             </h1>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach ($umkms as $umkm)
-                    <a href=""
+                    <a href="{{ route('umkm.show', [$umkm->id, $umkm->nama_umkm]) }}"
                         class="p-3 transition-transform transform bg-white rounded-lg shadow-md hover:text-white hover:bg-blue-200 hover:-translate-y-2 hover:shadow-lg">
                         <h2 class="mb-2 text-xl font-bold text-center text-gray-800">{{ $umkm->nama_umkm }}</h2>
                         <img class="object-cover w-full h-56 mt-4 rounded-t-lg"
