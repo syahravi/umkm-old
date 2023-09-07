@@ -40,6 +40,12 @@ Route::group([
         Route::get('buat', 'create')->name('umkm.create');
         Route::get('{umkm_id}', 'show')->name('umkm.show');
 
+        Route::controller(ProductController::class)->prefix('{umkm_id}')->group(function (){
+            Route::get('buat', 'create')->name('produk.create');
+            Route::get('{product_id}/edit', 'edit')->name('produk.edit');
+            Route::delete('hapus', 'destroy')->name('produk.destroy');
+        });
+
 
         Route::get('{umkm_id}/edit', 'edit')->name('umkm.edit');
         Route::delete('{umkm}/hapus', 'destroy')->name('umkm.destroy');
