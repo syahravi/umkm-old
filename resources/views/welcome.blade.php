@@ -1,10 +1,10 @@
 <x-guest-layout>
     {{-- *Landing --}}
-    <section class="sm:py-16 lg:py-24">
+    <section class="sm:py-16 lg:py-24 ">
         <div class="px-4 max-w-8xl sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center ">
-                <h2 class="w-full py-4 text-4xl font-bold leading-10 tracking-wide text-black sm:text-6xl lg:text-7xl">
-                    Selamat Datang di <span class="block lg:mt-3">Website UMKM</span>
+                <h2 class="w-full py-4 text-4xl font-bold leading-10 tracking-wide text-black sm:text-6xl lg:tex t-7xl">
+                    Selamat Datang di <span class="block mt-10 lg:mt-3">Website UMKM</span>
                     <span
                         class="block h-24 text-transparent lg:mt-3 bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">Desa
                         Cimulang</span>

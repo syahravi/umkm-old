@@ -12,15 +12,14 @@
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="mb-4 text-center ">
                 <a href="{{ route('admin.umkm.index') }}"
-                    class="px-8 py-4 mx-auto text-base font-medium text-center text-white bg-blue-500 rounded-lg me-3 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
-                    DAFTAR UMKM 
+                    class="w-full px-4 py-4 mx-auto text-base font-medium text-center text-white bg-blue-500 rounded-lg md:w-auto md:px-8 md:mx-3 hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
+                    DAFTAR UMKM
                 </a>
                 <a href="{{ route('admin.umkm.create') }}"
-                    class="px-8 py-4 mx-auto mt-4 text-base font-medium text-center text-white bg-green-500 rounded-lg hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-400">
+                    class="w-full px-4 py-4 mx-auto mt-4 text-base font-medium text-center text-white bg-green-500 rounded-lg md:w-auto md:px-8 md:mt-0 hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-400">
                     TAMBAH UMKM
                 </a>
-            </div>
-
+            </div>                     
             <div class="text-center">
                 <h2 class="mt-10 text-3xl font-extrabold leading-tight text-black uppercase sm:text-4xl lg:text-5xl">Panel Utama</h2>
             </div>
