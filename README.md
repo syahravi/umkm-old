@@ -26,17 +26,17 @@
         -   Menampilkan jumlah umkm dll. (Referensi: [Stats](https://www.tailbits.com/components/stats)) {ok}
     -   admin/umkm
         -   create
-            -   halaman buat umkm dibagusin lagi
+            -   halaman buat umkm dibagusin lagi{OK}
         -   index
-            -   Perbaiki header tambah UMKM
+            -   Perbaiki header tambah UMKM{OK}
         -   show
-            -   kasih header
-            -   kasih list produk dari UMKM tersebut
-            -   bisa edit dan hapus produk
+            -   kasih header{OK}
+            -   kasih list produk dari UMKM tersebut{OK}
+            -   bisa edit dan hapus produk{OK}
         -   edit
-            -   halaman edit umkm ambil berdasarkan halaman buat umkm
+            -   halaman edit umkm ambil berdasarkan halaman buat umkm{OK}
         -   produk
             -   index
-                -   menampilkan daftar produk dari umkm
+                -   menampilkan daftar produk dari umkm{OK}
             -   create
-                -   membuat produk baru (nama produk, deskripsi produk, jumlah produk, harga produk, gambar produk)
+                -   membuat produk baru (nama produk, deskripsi produk, jumlah produk, harga produk, gambar produk){OK}
