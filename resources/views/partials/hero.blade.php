@@ -12,7 +12,7 @@
   ></div>
 
   <div
-    class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+    class="relative max-w-screen-xl px-4 py-32 mx-auto sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
     <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
       <h1 class="text-3xl font-extrabold sm:text-5xl">
@@ -23,22 +23,22 @@
         </strong>
       </h1>
 
-      <p class="mt-4 max-w-lg sm:text-xl/relaxed">
+      <p class="max-w-lg mt-4 sm:text-xl/relaxed">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
         tenetur fuga ducimus numquam ea!
       </p>
 
-      <div class="mt-8 flex flex-wrap gap-4 text-center">
+      <div class="flex flex-wrap gap-4 mt-8 text-center">
         <a
           href="#"
-          class="block w-full rounded bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+          class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
         >
           Get Started
         </a>
 
         <a
           href="#"
-          class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
+          class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 hover:text-rose-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
         >
           Learn More
         </a>
