@@ -13,7 +13,7 @@
 
 # Catatan Pre-release
 
--   logonya besarin
+-   logonya besarin{ok}
 -   views
     -   welcome
         -   Youtube komentarin dulu {ok}
@@ -23,7 +23,7 @@
         -   show
             -   perbaiki view berdasarkan kontroler {ok}
     -   dashboard
-        -   Menampilkan jumlah umkm dll. (Referensi: [Stats](https://www.tailbits.com/components/stats))
+        -   Menampilkan jumlah umkm dll. (Referensi: [Stats](https://www.tailbits.com/components/stats)) {ok}
     -   admin/umkm
         -   create
             -   halaman buat umkm dibagusin lagi
