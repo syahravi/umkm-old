@@ -24,8 +24,9 @@
     <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="flex items-end justify-between">
-                <div class="flex-1 text-center lg:text-left">
-                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Daftar Produk</h2>
+                <div class="flex-1 text-center ">
+                    <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Produk UMKM</h2>
+                    <p class="max-w-xl mx-auto mt-4 mb-10 leading-relaxed text-center text-gray-600">Temukan beragam produk menarik dari UMKM lokal yang siap memenuhi kebutuhan Anda!</p>
                 </div>
     
                 {{-- <div class="hidden lg:flex lg:items-center lg:space-x-3">
