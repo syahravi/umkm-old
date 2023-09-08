@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use App\Models\UMKM;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -67,7 +68,12 @@ class UMKMController extends Controller
     public function show($umkm)
     {
         $umkm = UMKM::findOrFail($umkm);
-        return view('admin.umkm.show', compact('umkm'));
+        $products = Product::where('umkm_id', $umkm->id)->get();
+        $data = [
+            'products'=> $products,
+            'umkm'=> $umkm,
+        ];
+        return view('admin.umkm.show', $data);
     }
 
     /**
@@ -84,28 +90,28 @@ class UMKMController extends Controller
     public function update(Request $request, UMKM $umkm)
     {
         $request->validate([
-            'gambar_umkm' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'gambar_produk' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $umkm = UMKM::findOrFail($request->id);
-        $umkm->nama_umkm = $request->nama_umkm;
-        $umkm->deskripsi = $request->deskripsi;
+        $umkm->name = $request->name;
+        $umkm->description = $request->description;
 
         // Handling image upload
-        if($request->hasFile('gambar_umkm')) {
-            Storage::delete('storage/' . $request->nama_umkm . '/' . $umkm->gambar_umkm);
-            $gambar_umkm = $request->file('gambar_umkm');
-            $gambar_umkmName = time() . $gambar_umkm->getClientOriginalName();
-            $gambar_umkm->move(public_path('storage/' . $umkm->id), $gambar_umkmName);
-            $umkm->gambar_umkm = $gambar_umkmName;
+        if($request->hasFile('thumbnail')) {
+            Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
+            $thumbnail = $request->file('thumbnail');
+            $thumbnailName = time() . $thumbnail->getClientOriginalName();
+            $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
+            $umkm->thumbnail = $thumbnailName;
         }
 
-        if($request->hasFile('gambar_produk')) {
-            Storage::delete('storage/' . $request->nama_umkm . '/' . $umkm->gambar_umkm);
-            $gambar_produk = $request->file('gambar_produk');
-            $gambar_produkName = time() . $gambar_produk->getClientOriginalName();
-            $gambar_produk->move(public_path('storage/' . $umkm->id), $gambar_produkName);
-            $umkm->gambar_produk = $gambar_produkName;
+        if($request->hasFile('thumbnail')) {
+            Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
+            $thumbnail = $request->file('thumbnail');
+            $thumbnailName = time() . $thumbnail->getClientOriginalName();
+            $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
+            $umkm->thumbnail = $thumbnailName;
         }
         
         $umkm->save();
