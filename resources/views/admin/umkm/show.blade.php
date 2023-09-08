@@ -9,19 +9,19 @@
                 <div class="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
                     <div>
                         <h1 class="text-4xl font-bold text-black sm:text-6xl lg:text-7xl">
-                            Nama Umkm :{{ $umkm->nama_umkm }}
+                            Nama Umkm :{{ $umkm->name }}
                             <div class="relative inline-flex">
                             </div>
                         </h1>
     
-                        <p class="mt-8 text-base text-black sm:text-xl">keterangan :{{ $umkm->deskripsi }}</p>
+                        <p class="mt-8 text-base text-black sm:text-xl">keterangan :{{ $umkm->description }}</p>
     
                         <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
                             <a href="#" title="" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600" role="button"> Lihat Produk </a>
                         </div>
                     </div>
                     <div>
-                        <img class="w-full" src="{{ asset('/storage/' . $umkm->id . '/' . $umkm->gambar_umkm) }}" alt="{{ $umkm->nama_umkm }}" alt="umkm" />
+                        <img class="w-full" src="{{ $umkm->thumbnail }}" alt="{{ $umkm->name }}" alt="umkm" />
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <p class="max-w-xl mx-auto mt-4 mb-10 leading-relaxed text-center text-gray-600">Temukan beragam produk menarik dari UMKM lokal yang siap memenuhi kebutuhan Anda!</p>
                     
                     <!-- Tombol Tambah Produk -->
-                    <a href="{{ route('admin.produk.create', 'produk')}}" class="px-8 py-4 text-base font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
+                    <a href="{{ route('admin.produk.create', $umkm->id)}}" class="px-8 py-4 text-base font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
                         Tambah Produk
                     </a>
                 </div>
