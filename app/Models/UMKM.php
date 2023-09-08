@@ -17,7 +17,7 @@ class UMKM extends Model
     protected $fillable = [
         'name', 
         'description', 
-        'whatsapp',
+        'whatsapps',
         'thumbnail', 
     ];
 }

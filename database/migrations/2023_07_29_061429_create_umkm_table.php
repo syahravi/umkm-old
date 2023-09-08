@@ -14,7 +14,7 @@ class CreateUmkmTable extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->text('description');
-            $table->string('whatsapp')->nullable();
+            $table->string('whatsapps')->nullable();
             $table->string('thumbnail')->nullable();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
