@@ -15,10 +15,11 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name');
             $table->string('description');
-            $table->integer('stock');
             $table->decimal('price', 10,2)->default(0);
+            $table->integer('stock');
             $table->uuid('umkm_id');
             $table->foreign('umkm_id')->references('id')->on('umkm');
+            $table->string('thumbnail')->nullable();
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
