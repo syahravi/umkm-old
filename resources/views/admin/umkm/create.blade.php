@@ -25,20 +25,20 @@
                 @csrf
                 <div class="flex flex-col">
                     <h1 class="mb-6 text-3xl text-center">Tambah UMKM</h1>
-                    <label for="nama" class="text-sm font-medium text-gray-700">Nama UMKM</label>
-                    <input type="text" name="nama_umkm" id="nama"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('nama') @enderror"
-                        value="{{ old('nama') }}" required>
-                    @error('nama')
+                    <label for="name" class="text-sm font-medium text-gray-700">Nama UMKM</label>
+                    <input type="text" name="name" id="name"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('name') @enderror"
+                        value="{{ old('name') }}" required>
+                    @error('name')
                         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="flex flex-col">
-                    <label for="deskripsi" class="text-sm font-medium text-gray-700">Deskripsi UMKM</label>
-                    <textarea name="deskripsi" id="deskripsi"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('deskripsi') @enderror"
-                        rows="5" required>{{ old('deskripsi') }}</textarea>
-                    @error('deskripsi')
+                    <label for="description" class="text-sm font-medium text-gray-700">Deskripsi UMKM</label>
+                    <textarea name="description" id="description"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('description') @enderror"
+                        rows="5" required>{{ old('description') }}</textarea>
+                    @error('description')
                         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                     @enderror
                 </div>
