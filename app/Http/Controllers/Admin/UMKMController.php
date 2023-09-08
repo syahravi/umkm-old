@@ -64,8 +64,9 @@ class UMKMController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(UMKM $umkm)
+    public function show($umkm)
     {
+        $umkm = UMKM::findOrFail($umkm);
         return view('admin.umkm.show', compact('umkm'));
     }
 
