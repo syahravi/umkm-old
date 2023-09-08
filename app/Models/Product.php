@@ -18,6 +18,7 @@ class Product extends Model
         'description',
         'price',
         'stock',
-        'thumbnail_id'
+        'umkm_id',
+        'thumbnail'
     ];
 }
