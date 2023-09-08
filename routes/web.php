@@ -21,7 +21,7 @@ Route::group([
 ], function () {
     Route::controller(UMKMController::class)->group(function (){
         Route::get('/', 'index')->name('index');
-        Route::get('{umkm_id}-{nama_umkm}', 'show')->name('show');
+        Route::get('{umkm_id}', 'show')->name('show');
     });
 });
 
