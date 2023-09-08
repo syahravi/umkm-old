@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\UMKM;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class UMKMController extends Controller
 {
@@ -31,28 +32,30 @@ class UMKMController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $validator = Validator::make($request->all(), [
             'name' => 'required',
             'description' => 'required',
-            'whatsapps' => 'required|regex:/^\+(?:[0-9] ?){6,14}[0-9]$/',
+            'whatsapps' => 'required|regex:/^(?:[0-9] ?){6,14}[0-9]$/',
             'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
+    
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
         $umkm = UMKM::create([
-            'nama_umkm' => $request->nama_umkm,
-            'deskripsi' => $request->deskripsi,
+            'name' => $request->name,
+            'description'=> $request->description,
+            'whatsapps'=> $request->whatsapps,
         ]);
 
-        // Handling image upload
-        $gambar_umkm = $request->file('gambar_umkm');
-        $gambar_umkmName = time() . $gambar_umkm->getClientOriginalName();
-        $gambar_umkm->move(public_path('storage/' . $umkm->id), $gambar_umkmName);
-        $umkm->gambar_umkm = $gambar_umkmName;
-
-        $gambar_produk = $request->file('gambar_produk');
-        $gambar_produkName = time() . $gambar_produk->getClientOriginalName();
-        $gambar_produk->move(public_path('storage/' . $umkm->id), $gambar_produkName);
-        $umkm->gambar_produk = $gambar_produkName;
+        // Thumbnail
+        $thumbnail = $request->file('thumbnail');
+        $thumbnailName = time() . '.' . $thumbnail->extension();
+        $thumbnail->move(public_path('storage/UMKM/' . $umkm->id . '/thumbnail'), $thumbnailName);
+        $umkm->thumbnail = '/storage/UMKM/' . $umkm->id . '/thumbnail/' . $thumbnailName;
         $umkm->save();
 
         return redirect()->back();
