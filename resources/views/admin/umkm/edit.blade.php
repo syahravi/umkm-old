@@ -3,7 +3,7 @@
 @section('content')
     <div class="max-w-3xl mx-auto p-6 bg-white">
         <h1 class="text-3xl text-center font-bold mb-6">Edit UMKM</h1>
-        <form action="{{ route('umkms.update') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.umkm.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="id" value="{{ $umkm->id }}">
             <div class="mb-4">
