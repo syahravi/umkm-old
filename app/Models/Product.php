@@ -7,17 +7,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class UMKM extends Model
+class Product extends Model
 {
     use HasFactory, SoftDeletes, Uuids;
-
-    protected $table = 'umkm';
+    protected $table = 'products';
     protected $primaryKey = "id";
     protected $dates = ['delete_at'];
     protected $fillable = [
-        'name', 
-        'description', 
-        'whatsapp',
-        'thumbnail', 
+        'name',
+        'description',
+        'price',
+        'stock',
+        'thumbnail_id'
     ];
 }
