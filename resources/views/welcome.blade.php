@@ -74,14 +74,15 @@
             </h1>
             <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach ($umkms as $umkm)
-                    <a href="{{ route('umkm.show', [$umkm->id, $umkm->nama_umkm]) }}"
+                    <a href="{{ route('umkm.show', $umkm->id) }}"
                         class="p-3 transition-transform transform bg-white rounded-lg shadow-md hover:text-white hover:bg-blue-200 hover:-translate-y-2 hover:shadow-lg">
-                        <h2 class="mb-2 text-xl font-bold text-center text-gray-800">{{ $umkm->nama_umkm }}</h2>
+                        <h2 class="mb-2 text-xl font-bold text-center text-gray-800">{{ $umkm->name }}</h2>
                         <img class="object-cover w-full h-56 mt-4 rounded-t-lg"
-                            src="{{ asset('storage/' . $umkm->id . '/' . $umkm->gambar_umkm) }}" alt="UMKM Image">
+                            src="{{ $umkm->thumbnail }}" alt="UMKM Image">
 
                         <div class="p-4">
-                            <p class="w-auto text-gray-600">{{ $umkm->deskripsi }}</p>
+                            <p class="w-auto text-gray-600">{{ $umkm->description }}</p>
+                            <span>{{ $umkm->whatsapps }}</span>
                         </div>
                     </a>
                 @endforeach
