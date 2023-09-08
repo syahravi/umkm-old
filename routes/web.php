@@ -44,6 +44,7 @@ Route::group([
             Route::get('buat', 'create')->name('produk.create');
             Route::get('{product_id}/edit', 'edit')->name('produk.edit');
             Route::delete('hapus', 'destroy')->name('produk.destroy');
+            Route::post('v1/store', 'store')->name('produk.store');
         });
 
 
