@@ -10,7 +10,7 @@
             
             <div class="flex flex-col">
                 <label for="nama" class="text-sm font-medium text-gray-700">Nama Produk</label>
-                <input type="text" name="nama_umkm" id="nama"
+                <input type="text" name="name" id="nama"
                     class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('nama') @enderror"
                     value="{{ old('nama') }}" required>
                 @error('nama')
@@ -19,11 +19,11 @@
             </div>
             
             <div class="flex flex-col">
-                <label for="deskripsi" class="text-sm font-medium text-gray-700">Deskripsi Produk</label>
-                <textarea name="deskripsi" id="deskripsi"
-                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('deskripsi') @enderror"
-                    rows="5" required>{{ old('deskripsi') }}</textarea>
-                @error('deskripsi')
+                <label for="description" class="text-sm font-medium text-gray-700">description Produk</label>
+                <textarea name="description" id="description"
+                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('description') @enderror"
+                    rows="5" required>{{ old('description') }}</textarea>
+                @error('description')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>
@@ -47,11 +47,11 @@
                 @enderror
             </div>
             <div class="flex flex-col">
-                <label for="gambar_produk" class="text-sm font-medium text-gray-700">Gambar Produk</label>
-                <input type="file" name="gambar_produk" id="gambar_produk"
-                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('gambar_produk') @enderror"
+                <label for="thumbnail" class="text-sm font-medium text-gray-700">Gambar Produk</label>
+                <input type="file" name="thumbnail" id="thumbnail"
+                    class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('thumbnail') @enderror"
                     required>
-                @error('gambar_produk')
+                @error('thumbnail')
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
             </div>
