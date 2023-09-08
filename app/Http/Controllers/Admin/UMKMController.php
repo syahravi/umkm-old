@@ -91,7 +91,6 @@ class UMKMController extends Controller
     {
         $request->validate([
             'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
         $umkm = UMKM::findOrFail($request->id);
         $umkm->name = $request->name;
