@@ -1,5 +1,4 @@
 <?php
-// app/Http/Controllers/UMKMController.php
 
 namespace App\Http\Controllers;
 
@@ -33,39 +32,7 @@ class UMKMController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
-
-        $umkm = UMKM::create([
-            'name' => $request->name,
-            'description' => $request->description,
-        ]);
-
-        // Handling image upload
-        $thumbnail = $request->file('thumbnail');
-        $thumbnailName = time() . $thumbnail->getClientOriginalName();
-        $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
-        $umkm->thumbnail = $thumbnailName;
-
-        $thumbnail = $request->file('thumbnail');
-        $thumbnailName = time() . $thumbnail->getClientOriginalName();
-        $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
-        $umkm->thumbnail = $thumbnailName;
-        $umkm->save();
-
-        // $input = $request->all();
-
-        // Upload thumbnail dan thumbnail ke direktori storage/public/umkms
-        // $input['thumbnail'] = $request->file('thumbnail')->store('umkms', 'public');
-        // $input['thumbnail'] = $request->file('thumbnail')->store('umkms', 'public');
-
-        // UMKM::create($input);
-
-        return redirect()->back();
+    //    
     }
 
     public function edit(UMKM $umkm)
@@ -75,48 +42,7 @@ class UMKMController extends Controller
 
     public function update(Request $request, UMKM $umkm)
     {
-        $request->validate([
-            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
-        $umkm = UMKM::findOrFail($request->id);
-        $umkm->name = $request->name;
-        $umkm->description = $request->description;
-
-        // Handling image upload
-        if($request->hasFile('thumbnail')) {
-            Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
-            $thumbnail = $request->file('thumbnail');
-            $thumbnailName = time() . $thumbnail->getClientOriginalName();
-            $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
-            $umkm->thumbnail = $thumbnailName;
-        }
-
-        if($request->hasFile('thumbnail')) {
-            Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
-            $thumbnail = $request->file('thumbnail');
-            $thumbnailName = time() . $thumbnail->getClientOriginalName();
-            $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
-            $umkm->thumbnail = $thumbnailName;
-        }
-        
-        $umkm->save();
-
-        // $input = $request->all();
-
-        // // Jika ada thumbnail baru, upload dan hapus gambar lama
-        // if ($request->hasFile('thumbnail')) {
-        //     $input['thumbnail'] = $request->file('thumbnail')->store('umkms', 'public');
-        // }
-
-        // // Jika ada thumbnail baru, upload dan hapus gambar lama
-        // if ($request->hasFile('thumbnail')) {
-        //     $input['thumbnail'] = $request->file('thumbnail')->store('umkms', 'public');
-        // }
-
-        // $umkm->update($input);
-
-        return redirect()->back();
+        // 
     }
 
     public function destroy(UMKM $umkm)
