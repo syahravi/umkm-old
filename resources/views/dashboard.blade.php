@@ -58,12 +58,12 @@
                 <!-- Loop through the UMKMs from the controller and display the cards -->
                 @foreach ($umkms as $umkm)
                     <div class="p-3 bg-white rounded-lg shadow-md">
-                        <h2 class="mb-2 text-xl font-bold text-center text-gray-800">{{ $umkm->nama_umkm }}</h2>
+                        <h2 class="mb-2 text-xl font-bold text-center text-gray-800">{{ $umkm->name }}</h2>
                         <img class="object-cover w-full h-56 rounded-t-lg"
-                        src="{{ asset('storage/' . $umkm->id . '/'. $umkm->gambar_umkm) }}" alt="{{ $umkm->nama_umkm }} Image">
+                        src="{{ asset('storage/' . $umkm->id . '/'. $umkm->thumbnail) }}" alt="{{ $umkm->name }} Image">
 
                         <div class="p-4">
-                            <p class="w-auto text-gray-600">{{ $umkm->deskripsi }}</p>
+                            <p class="w-auto text-gray-600">{{ $umkm->description }}</p>
                         </div>
                     </div>
                 @endforeach
