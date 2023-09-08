@@ -32,10 +32,10 @@ class UMKMController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama_umkm' => 'required',
-            'deskripsi' => 'required',
-            'gambar_umkm' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'gambar_produk' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name' => 'required',
+            'description' => 'required',
+            'whatsapps' => 'required|regex:/^\+(?:[0-9] ?){6,14}[0-9]$/',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $umkm = UMKM::create([
