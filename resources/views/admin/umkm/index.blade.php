@@ -14,14 +14,14 @@
                 <div class="p-4 border rounded-lg shadow-md">
                     <div class="mb-2 text-center">
                         <img src="{{ $umkm->thumbnail }}"
-                            alt="{{ $umkm->nama_umkm }}" class="object-cover w-full h-32 mx-auto rounded-lg">
+                            alt="{{ $umkm->name }}" class="object-cover w-full h-32 mx-auto rounded-lg">
                     </div>
                     <div class="mb-2">
                         <span class="font-semibold">Nama:</span>
                         {{ $umkm->name }}
                     </div>
                     <div class="mb-2 ">
-                        <span class="font-semibold">Deskripsi:</span>
+                        <span class="font-semibold">description:</span>
                         <p class="w-auto h-16 overflow-y-auto">{{ $umkm->description }}</p>
                         <span>{{ $umkm->whatsapps }}</span>
                     </div>

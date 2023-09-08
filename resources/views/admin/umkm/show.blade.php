@@ -14,7 +14,7 @@
                             </div>
                         </h1>
     
-                        <p class="mt-8 text-base text-black sm:text-xl">keterangan :{{ $umkm->description }}</p>
+                        <p class="mt-8 text-base text-black sm:text-xl">keterangan :{{ $umkm->description }} {{ $umkm->whatsapps }}</p>
     
                         <div class="mt-10 sm:flex sm:items-center sm:space-x-8">
                             <a href="#" title="" class="inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600" role="button"> Lihat Produk </a>
@@ -39,35 +39,35 @@
                         Tambah Produk
                     </a>
                 </div>
-                
             </div>
             <div class="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
-                <div class="overflow-hidden bg-white rounded shadow">
-                    <div class="p-5">
-                        <div class="relative">
-                            <a href="#" title="" class="block aspect-w-4 aspect-h-3">
-                                <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-1.jpg" alt="" />
-                            </a>
-                        </div>
-                        <p class="mt-5 text-2xl font-semibold">
-                            <a href="#" title="" class="text-black">Nama Produk</a>
-                        </p>
-                        <p class="mt-4 text-base text-gray-600">Deskripsi produk</p>
-                
-                        <!-- Harga dan Sisa Produk -->
-                        <div class="flex items-center justify-between mt-4">
-                            <p class="text-xl font-semibold text-gray-800">Harga: $99</p>
-                            <p class="text-lg text-gray-600">Sisa Produk: 10</p>
-                        </div>
-                
-                        <!-- Tombol Edit dan Hapus -->
-                        <div class="flex justify-center mt-4 space-x-4">
-                            <a href="{{ route('admin.produk.edit', ['6', '1'])}}" class="text-blue-500 hover:underline">Edit</a>
-                            <button class="text-red-500 hover:underline">Hapus</button>
+                @foreach ($products as $product)
+                    <div class="overflow-hidden bg-white rounded shadow">
+                        <div class="p-5">
+                            <div class="relative">
+                                <a href="#" title="" class="block aspect-w-4 aspect-h-3">
+                                    <img class="object-cover w-full h-full" src="{{ $product->thumbnail }}" alt="" />
+                                </a>
+                            </div>
+                            <p class="mt-5 text-2xl font-semibold">
+                                <a href="#" title="" class="text-black">{{ $product->name }}</a>
+                            </p>
+                            <p class="mt-4 text-base text-gray-600">{{ $product->description }}</p>
+                    
+                            <!-- Harga dan Sisa Produk -->
+                            <div class="flex items-center justify-between mt-4">
+                                <p class="text-xl font-semibold text-gray-800">Rp{{ $product->price }}</p>
+                                <p class="text-lg text-gray-600">{{ $product->stock }}</p>
+                            </div>
+                    
+                            <!-- Tombol Edit dan Hapus -->
+                            <div class="flex justify-center mt-4 space-x-4">
+                                <a href="{{ route('admin.produk.edit', ['6', '1'])}}" class="text-blue-500 hover:underline">Edit</a>
+                                <button class="text-red-500 hover:underline">Hapus</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
+                @endforeach
             </div>
             
         </div>

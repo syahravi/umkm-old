@@ -34,7 +34,7 @@
                     @enderror
                 </div>
                 <div class="flex flex-col">
-                    <label for="description" class="text-sm font-medium text-gray-700">Deskripsi UMKM</label>
+                    <label for="description" class="text-sm font-medium text-gray-700">description UMKM</label>
                     <textarea name="description" id="description"
                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('description') @enderror"
                         rows="5" required>{{ old('description') }}</textarea>
