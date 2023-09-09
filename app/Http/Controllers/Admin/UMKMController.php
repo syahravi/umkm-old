@@ -79,8 +79,9 @@ class UMKMController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(UMKM $umkm)
+    public function edit($umkm)
     {
+        $umkm = UMKM::findOrFail($umkm);
         return view('admin.umkm.edit', compact('umkm'));
     }
 
@@ -89,33 +90,61 @@ class UMKMController extends Controller
      */
     public function update(Request $request, UMKM $umkm)
     {
-        $request->validate([
-            'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+            'whatsapps' => 'required|regex:/^(?:[0-9] ?){6,14}[0-9]$/',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        $umkm = UMKM::findOrFail($request->id);
-        $umkm->name = $request->name;
-        $umkm->description = $request->description;
-
-        // Handling image upload
-        if($request->hasFile('thumbnail')) {
-            Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
-            $thumbnail = $request->file('thumbnail');
-            $thumbnailName = time() . $thumbnail->getClientOriginalName();
-            $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
-            $umkm->thumbnail = $thumbnailName;
+    
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
         }
 
-        if($request->hasFile('thumbnail')) {
-            Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
-            $thumbnail = $request->file('thumbnail');
-            $thumbnailName = time() . $thumbnail->getClientOriginalName();
-            $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
-            $umkm->thumbnail = $thumbnailName;
-        }
-        
+        $umkm = UMKM::create([
+            'name' => $request->name,
+            'description'=> $request->description,
+            'whatsapps'=> $request->whatsapps,
+        ]);
+
+        // Thumbnail
+        $thumbnail = $request->file('thumbnail');
+        $thumbnailName = time() . '.' . $thumbnail->extension();
+        $thumbnail->move(public_path('storage/UMKM/' . $umkm->id . '/thumbnail'), $thumbnailName);
+        $umkm->thumbnail = '/storage/UMKM/' . $umkm->id . '/thumbnail/' . $thumbnailName;
         $umkm->save();
 
         return redirect()->back();
+
+        // $request->validate([
+        //     'thumbnail' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        // ]);
+        // $umkm = UMKM::findOrFail($request->id);
+        // $umkm->name = $request->name;
+        // $umkm->description = $request->description;
+
+        // // Handling image upload
+        // if($request->hasFile('thumbnail')) {
+        //     Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
+        //     $thumbnail = $request->file('thumbnail');
+        //     $thumbnailName = time() . $thumbnail->getClientOriginalName();
+        //     $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
+        //     $umkm->thumbnail = $thumbnailName;
+        // }
+
+        // if($request->hasFile('thumbnail')) {
+        //     Storage::delete('storage/' . $request->name . '/' . $umkm->thumbnail);
+        //     $thumbnail = $request->file('thumbnail');
+        //     $thumbnailName = time() . $thumbnail->getClientOriginalName();
+        //     $thumbnail->move(public_path('storage/' . $umkm->id), $thumbnailName);
+        //     $umkm->thumbnail = $thumbnailName;
+        // }
+        
+        // $umkm->save();
+
+        // return redirect()->back();
     }
 
     /**
