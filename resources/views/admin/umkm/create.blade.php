@@ -44,7 +44,7 @@
                 </div>
                 <div class="flex flex-col">
                     <label for="whatsapps" class="text-sm font-medium text-gray-700">Nomor WhatsApps <span class="text-gray-400">(Contoh: 6288290500979)</span></label>
-                    <input type="text" name="whatsapps" id="whatsapps"
+                    <input type="number" name="whatsapps" id="whatsapps"
                         class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('whatsapps') @enderror"
                         required>
                     @error('whatsapps')
