@@ -3,13 +3,13 @@
     <section class="sm:py-16 lg:py-24 ">
         <div class="px-4 max-w-8xl sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center ">
-                <h2 class="w-full py-4 text-4xl font-bold leading-10 tracking-wide text-black sm:text-6xl lg:tex t-7xl">
-                    Selamat Datang di <span class="block mt-10 lg:mt-3">Website UMKM</span>
+                <h2 class="w-full font-sans py-3 text-4xl font-black leading-10 tracking-wide text-black sm:text-6xl lg:tex t-7xl">
+                    Selamat Datang Di <span class="block font-mono  lg:mt-3">Website UMKM</span>
                     <span
-                        class="block h-24 text-transparent lg:mt-3 bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">Desa
+                        class="block h-24 font-black  font-sans text-transparent lg:mt-3 bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">Desa
                         Cimulang</span>
                 </h2>
-                <p class="my-4 text-lg text-gray-600 mb-7">Website ini adalah sebuah platform digital yang bertujuan
+                <p class="my-4 text-lg text-gray-600 ">Website ini adalah sebuah platform digital yang bertujuan
                     untuk mendukung dan memperkuat Usaha Mikro, Kecil, dan Menengah UMKM yang berlokasi di Desa
                     Cimulang. </p>
                 <div class="flex justify-center space-x-4">
@@ -95,7 +95,7 @@
         </div>
     </section>
     {{-- form pengaduan --}}
-    <section id="hubungikami" class="h-auto mx-auto bg-gray-100 ">
+    <section id="hubungikami" class=" container h-auto mx-auto bg-gray-100 ">
         <h1
             class="p-5 mt-10 mb-4 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
             Hubungi Kami

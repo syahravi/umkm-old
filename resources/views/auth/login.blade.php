@@ -4,8 +4,8 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
-    <section class="container mx-auto mt-10 rounded-lg ">
-        <div class="grid grid-cols-1 lg:grid-cols-2 me-10">
+    <section class="container mx-auto rounded-lg absolute">
+        <div class="grid grid-cols-1 lg:grid-cols-2 md:mt-10 ">
             <!-- Gambar di sisi kiri -->
             <div class="relative flex items-end px-4 pt-16 pb-10 sm:pb-16 md:justify-center lg:pb-24 sm:px-6 lg:px-8">
                 <div class="absolute inset-0">

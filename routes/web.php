@@ -8,8 +8,8 @@ use App\Http\Controllers\InfoUmkm;
 // Rute untuk halaman welcome
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
-Route::get('/single', function () {
-    return view('single');
+Route::get('/040', function () {
+    return view('040');
 });
 
 Route::get('/info_umkm', [InfoUmkm::class, 'index'])->name('infoumkm');

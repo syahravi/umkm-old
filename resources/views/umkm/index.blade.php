@@ -1,9 +1,9 @@
 <x-guest-layout>
-    <section class="py-10 bg-gray-100">
-        <div class="container mx-auto mt-10">
+    <section class="bg-gray-100">
+        <div class="container mx-auto ">
             <div class="p-5 text-center text-white jumbotron bg-gradient-to-r from-blue-500 to-teal-400">
                 <h1 class="mb-4 text-6xl font-extrabold">Daftar UMKM</h1>
-                <p class="mx-auto mb-4 text-md sm:text-center">Temukan berbagai UMKM lokal yang menarik di daerah Anda.</p>
+                <p class="mx-auto mb-4 text-md sm:text-center">Temukan berbagai Produk Umkm Lokal Desa Cimulang yang  Sangat Menarik.</p>
             </div>
             <div class="grid grid-cols-1 gap-4 mt-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 <!-- Konten UMKM -->

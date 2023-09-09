@@ -33,11 +33,10 @@
                             class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-1 px-2 rounded-lg mx-1">
                             Edit
                         </a>
-                        <form action="{{ route('umkms.destroy', $umkm) }}" method="POST" class="inline">
+                        <form action="{{ route('admin.umkm.destroy', $producth) }}" method="POST" class="inline">
                             @csrf
-                            @method('DELETE')
                             <button type="submit"
-                                class="inline-block bg-red-500 hover:bg-red-600 text-white font-medium py-1 px-2 rounded-lg mx-1"
+                                class="inline-block px-2 py-1 mx-1 font-medium text-white bg-red-500 rounded-lg hover:bg-red-600"
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                                 Hapus
                             </button>
