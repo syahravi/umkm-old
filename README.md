@@ -42,24 +42,27 @@
                 -   membuat produk baru (nama produk, description produk, jumlah produk, harga produk, gambar produk){OK}
 
 ---
-- Model
-  - UMKM
-    - name
-    - description
-    - whatsapps
-    - thumbnail
-  - Product
-    - name
-    - description
-    - price
-    - stock
-    - umkm_id
-    - thumbnail
+
+-   Model
+    -   UMKM
+        -   name
+        -   description
+        -   whatsapps
+        -   thumbnail
+    -   Product
+        -   name
+        -   description
+        -   price
+        -   stock
+        -   umkm_id
+        -   thumbnail
 
 ---
+
 Jalankan perintah untuk menghapus dan membuat ulang database:
-- php artisan migrate:fresh
-Testing User tgl 9
-- judul umkm di fitur lihat umkm terlihat tidak rapi
-- didalam fitur edit masih meminta gambar umkm dan gambar produk
-- fitur hapus umkm tidak berjalan
+
+-   php artisan migrate:fresh
+    Testing User tgl 9
+-   judul umkm di fitur lihat umkm terlihat tidak rapi
+-   didalam fitur edit masih meminta gambar umkm dan gambar produk
+-   fitur hapus umkm tidak berjalan
