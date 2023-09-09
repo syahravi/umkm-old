@@ -49,7 +49,7 @@ Route::group([
 
 
         Route::get('{umkm_id}/edit', 'edit')->name('umkm.edit');
-        Route::delete('{umkm}/hapus', 'destroy')->name('umkm.destroy');
+        Route::post('{umkm}/hapus', 'destroy')->name('umkm.destroy');
         Route::post('v1/store', 'store')->name('umkm.store');
         Route::post('update', 'update')->name('umkm.update');
     });
