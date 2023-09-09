@@ -81,8 +81,8 @@
                             src="{{ $umkm->thumbnail }}" alt="UMKM Image">
 
                         <div class="p-4">
-                            <p class="w-auto text-gray-600">{{ $umkm->description }}</p>
-                            <span>{{ $umkm->whatsapps }}</span>
+                            <p class="w-auto text-gray-600  h-20 overflow-y-auto">{{ $umkm->description }}</p>
+                            <button class=" text-white  rounded-lg flex items-center mx-auto mt-2 p-2 bg-teal-500">{{ $umkm->whatsapps }}</button>
                         </div>
                     </a>
                 @endforeach
