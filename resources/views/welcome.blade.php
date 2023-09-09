@@ -47,10 +47,7 @@
             <!-- Video Container (Right) -->
             <div class="mt-8 md:w-1/2 md:mt-0">
                 <div class="aspect-w-16 aspect-h-9">
-                    {{-- <iframe class="w-full shadow-sm " height="315px" src="https://www.youtube.com/embed/oRNfzvjXzyc"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe> --}}
+                        <iframe class="w-full shadow-sm " height="315"  src="https://www.youtube.com/embed/NhsPaLbkpes?si=-Br0D-Kk3cRjlM-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
