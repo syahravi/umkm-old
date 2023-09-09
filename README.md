@@ -66,3 +66,13 @@ Jalankan perintah untuk menghapus dan membuat ulang database:
 -   judul umkm di fitur lihat umkm terlihat tidak rapi
 -   didalam fitur edit masih meminta gambar umkm dan gambar produk
 -   fitur hapus umkm tidak berjalan
+
+Revisi tgl 10
+- Edit produk tidak berfungsi
+- Hapus produk tidak berfungsi 
+- Show umkm dikasih 3 slide gambar (gambar bisa mengambil dari gambar produk)
+- Di list umkm tedapat kata yg ambigu
+- Di home utama kalimat "Selamat datang" dalam tampilan android terpisah jarak yg lumayan jauh dengan kalimat "Website UMKM
+Desa Cimulang".
+- Navigasi tidak berfungsi
+- Warna footer warna kurang sesuai
