@@ -55,8 +55,7 @@
                 <div class="flex flex-col">
                     <label for="thumbnail" class="text-sm font-medium text-gray-700">Gambar UMKM</label>
                     <input type="file" name="thumbnail" id="thumbnail"
-                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('thumbnail') @enderror"
-                        required>
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('thumbnail') @enderror">
                     @error('thumbnail')
                         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                     @enderror
