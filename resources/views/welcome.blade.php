@@ -16,7 +16,7 @@
                     <a href="{{ route('umkm.index') }}"
                         class="px-8 py-4 mb-2 mr-2 text-base font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
                         Info UMKM </a>
-                    <a href="https://api.whatsapp.com/qr/6KCVZL7AK5K5L1?autoload=1&app_absent=0"
+                    <a href="https://wa.me/087788132326/"
                         class="px-8 py-4 mb-2 mr-2 text-base font-medium text-center text-white rounded-lg bg-slate-950 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-800">
                         Butuh Bantuan </a>
                 </div>
