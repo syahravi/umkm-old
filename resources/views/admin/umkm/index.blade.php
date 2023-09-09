@@ -36,7 +36,6 @@
                         </a>
                         <form action="{{ route('admin.umkm.destroy', $umkm) }}" method="POST" class="inline">
                             @csrf
-                            @method('DELETE')
                             <button type="submit"
                                 class="inline-block px-2 py-1 mx-1 font-medium text-white bg-red-500 rounded-lg hover:bg-red-600"
                                 onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
