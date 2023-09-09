@@ -123,6 +123,7 @@ class UMKMController extends Controller
      */
     public function destroy($umkm)
     {
+        $umkm = UMKM::findOrFail($umkm);
         $umkm->delete();
 
         return redirect()->route('admin.umkm.index')->with('success', 'Data UMKM berhasil dihapus!');
