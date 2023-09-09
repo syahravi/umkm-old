@@ -13,17 +13,17 @@
             @foreach ($umkms as $umkm)
                 <div class="p-4 border rounded-lg shadow-md">
                     <div class="mb-2 text-center">
-                        <img src="{{ asset('/storage/' . $umkm->id . '/' . $umkm->gambar_umkm) }}"
-                            alt="{{ $umkm->nama_umkm }}" class="object-cover w-full h-32 mx-auto rounded-lg">
+                        <img src="{{ $umkm->thumbnail }}"
+                            alt="{{ $umkm->name }}" class="object-cover w-full h-32 mx-auto rounded-lg">
                     </div>
                     <div class="mb-2">
                         <span class="font-semibold">Nama:</span>
-                        {{ $umkm->nama_umkm }}
+                        {{ $umkm->name }}
                     </div>
                     <div class="mb-2 ">
-                        <span class="font-semibold">Deskripsi:</span>
-                        <p class="w-auto h-16 overflow-y-auto">{{ $umkm->deskripsi }}</p>
-                        
+                        <span class="font-semibold">description:</span>
+                        <p class="w-auto h-16 overflow-y-auto">{{ $umkm->description }}</p>
+                        <span>{{ $umkm->whatsapps }}</span>
                     </div>
                     <div class="flex justify-center">
                         <a href="{{ route('admin.umkm.show', $umkm) }}"

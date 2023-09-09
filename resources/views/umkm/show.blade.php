@@ -4,7 +4,7 @@
         <div class="absolute inset-0">
             <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left"
              {{--ambil gambar dari gambar umkm  --}}
-            src="{{asset('images/pusat umkm desa cimulang.webp')}}" alt="" />
+            src="{{ $umkm->thumbnail}}" alt="" />
         </div>
     
         <div class="absolute inset-0 hidden bg-gradient-to-r md:block from-black to-transparent"></div>
@@ -14,8 +14,8 @@
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             {{-- @foreach ($umkms as $umkm) --}}
             <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
-                <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">JUDUL_UMKM_></h2>
-                <p class="mt-4 text-base text-gray-200">deskripsi lengkap</p>
+                <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">{{ $umkm->name }}></h2>
+                <p class="mt-4 text-base text-gray-200">{{ $umkm->description }} {{ $umkm->whatsapps }}</p>
             </div>
             {{-- @endforeach --}}
         </div>
@@ -45,26 +45,29 @@
             </div>
     
             <div class="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
-                <div class="overflow-hidden bg-white rounded shadow">
-                    <div class="p-5">
-                        <div class="relative">
-                            <a href="#" title="" class="block aspect-w-4 aspect-h-3">
-                                <img class="object-cover w-full h-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/blog/2/blog-post-1.jpg" alt="" />
-                            </a>
-                        </div>
-                        <p class="mt-5 text-2xl font-semibold">
-                            <a href="#" title="" class="text-black">Nama Produk</a>
-                        </p>
-                        <p class="mt-4 text-base text-gray-600">Deskripsi produk</p>
-                        
-                        <!-- Harga dan Sisa Produk -->
-                        <div class="flex items-center justify-between mt-4">
-                            <p class="text-xl font-semibold text-gray-800">Harga: $99</p>
-                            <p class="text-lg text-gray-600">Sisa Produk: 10</p>
+                @foreach ($products as $product)
+                    <div class="overflow-hidden bg-white rounded shadow">
+                        <div class="p-5">
+                            <div class="relative">
+                                <a href="#" title="" class="block aspect-w-4 aspect-h-3">
+                                    <img class="object-cover w-full h-full" src="{{ $product->thumbnail }}" alt="" />
+                                </a>
+                            </div>
+                            <p class="mt-5 text-2xl font-semibold">
+                                <a href="#" title="" class="text-black">{{ $product->name }}</a>
+                            </p>
+                            <p class="mt-4 text-base text-gray-600">{{ $product->description }}</p>
+                            
+                            <!-- Harga dan Sisa Produk -->
+                            <div class="flex items-center justify-between mt-4">
+                                <p class="text-xl font-semibold text-gray-800">Rp{{ $product->price }}</p>
+                                <p class="text-lg text-gray-600">{{ $product->stock }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
+            
         </div>
     </section>
     {{-- footer --}}

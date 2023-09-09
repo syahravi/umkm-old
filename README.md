@@ -39,4 +39,23 @@
             -   index
                 -   menampilkan daftar produk dari umkm{OK}
             -   create
-                -   membuat produk baru (nama produk, deskripsi produk, jumlah produk, harga produk, gambar produk){OK}
+                -   membuat produk baru (nama produk, description produk, jumlah produk, harga produk, gambar produk){OK}
+
+---
+- Model
+  - UMKM
+    - name
+    - description
+    - whatsapps
+    - thumbnail
+  - Product
+    - name
+    - description
+    - price
+    - stock
+    - umkm_id
+    - thumbnail
+
+---
+Jalankan perintah untuk menghapus dan membuat ulang database:
+- php artisan migrate:fresh
