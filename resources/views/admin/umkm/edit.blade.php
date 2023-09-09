@@ -1,47 +1,72 @@
 @extends('layouts.app')
 
+@section('title', 'Ubah UMKM')
+
 @section('content')
-    <div class="max-w-3xl mx-auto p-6 bg-white">
-        <h1 class="text-3xl text-center font-bold mb-6">Edit UMKM</h1>
-        <form action="{{ route('admin.umkm.update') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <input type="hidden" name="id" value="{{ $umkm->id }}">
-            <div class="mb-4">
-                <label for="nama" class="block text-gray-700 font-semibold">Nama UMKM</label>
-                <input type="text" name="name" id="nama"
-                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-400 @error('nama') border-red-500 @enderror"
-                    value="{{ old('nama', $umkm->name) }}" required>
-                @error('nama')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
+    <div class="py-4 bg-blue-500">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex justify-end space-x-4">
+                <a href="{{ route('admin.umkm.index') }}"
+                    class="inline-block px-8 py-4 text-base font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
+                    UMKM List
+                </a>
+                <a href="{{ route('admin.umkm.create') }}"
+                    class="inline-block px-8 py-4 text-base font-medium text-white bg-green-500 rounded-lg hover:bg-green-400 focus:ring-4 focus:outline-none focus:ring-green-400">
+                    Tambah UMKM
+                </a>
             </div>
-            <div class="mb-4">
-                <label for="description" class="block text-gray-700 font-semibold">description UMKM</label>
-                <textarea name="description" id="description"
-                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-400 @error('description') border-red-500 @enderror"
-                    rows="5" required>{{ old('description', $umkm->description) }}</textarea>
-                @error('description')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
-            </div>
-            <div class="mb-4">
-                <label for="thumbnail" class="block text-gray-700 font-semibold">Gambar UMKM</label>
-                <input type="file" name="thumbnail" id="thumbnail"
-                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-400 @error('thumbnail') border-red-500 @enderror">
-                @error('thumbnail')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
-            </div>
-            <div class="mb-4">
-                <label for="thumbnail" class="block text-gray-700 font-semibold">Gambar Produk</label>
-                <input type="file" name="thumbnail" id="thumbnail"
-                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-400 @error('thumbnail') border-red-500 @enderror">
-                @error('thumbnail')
-                    <span class="text-red-500 text-sm">{{ $message }}</span>
-                @enderror
-            </div>
-            <button type="submit"
-                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg">Update</button>
-        </form>
+        </div>
+    </div>
+
+    <div class="py-10 bg-gray-100">
+        <div class="max-w-2xl px-4 mx-auto sm:px-6 lg:px-8">
+            <form action="{{ route('admin.umkm.update') }}" method="POST" enctype="multipart/form-data"
+                class="px-8 py-6 space-y-4 bg-white rounded-lg shadow">
+                @csrf
+                <input type="hidden" name="umkm_id" value="{{ $umkm->id }}">
+                <div class="flex flex-col">
+                    <h1 class="mb-6 text-3xl text-center">Ubah UMKM</h1>
+                    <label for="name" class="text-sm font-medium text-gray-700">Nama UMKM</label>
+                    <input type="text" name="name" id="name"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('name') @enderror"
+                        value="{{ $umkm->name }}" required>
+                    @error('name')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="flex flex-col">
+                    <label for="description" class="text-sm font-medium text-gray-700">Deskripsi UMKM </label>
+                    <textarea name="description" id="description"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('description') @enderror"
+                        rows="5" required>{{ $umkm->description }}</textarea>
+                    @error('description')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="flex flex-col">
+                    <label for="whatsapps" class="text-sm font-medium text-gray-700">Nomor WhatsApps <span class="text-gray-400">(Contoh: 6288290500979)</span></label>
+                    <input type="number" name="whatsapps" id="whatsapps"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('whatsapps') @enderror" value="{{ $umkm->whatsapps }}"
+                        required>
+                    @error('whatsapps')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="flex flex-col">
+                    <label for="thumbnail" class="text-sm font-medium text-gray-700">Gambar UMKM</label>
+                    <input type="file" name="thumbnail" id="thumbnail"
+                        class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 @error('thumbnail') @enderror"
+                        required>
+                    @error('thumbnail')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="flex items-center justify-center">
+                    <button type="submit" class="w-full px-8 py-4 text-base font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
+                        Simpan
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 @endsection
