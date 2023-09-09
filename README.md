@@ -59,3 +59,6 @@
 ---
 Jalankan perintah untuk menghapus dan membuat ulang database:
 - php artisan migrate:fresh
+Testing User tgl 9
+- judul umkm di fitur lihat umkm terlihat tidak rapi
+- didalam fitur edit masih meminta gambar umkm dan gambar produk
