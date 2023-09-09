@@ -45,7 +45,7 @@ class UMKMController extends Controller
         // 
     }
 
-    public function destroy(UMKM $umkm)
+    public function destroy($umkm)
     {
         $umkm->delete();
 
