@@ -121,7 +121,7 @@ class UMKMController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UMKM $umkm)
+    public function destroy($umkm)
     {
         $umkm->delete();
 
