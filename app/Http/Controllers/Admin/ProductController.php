@@ -83,16 +83,48 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'stock'=> 'required|numeric',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+    
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $product = Product::create([
+            'name' => $request->name,
+            'description'=> $request->description,
+            'price'=> $request->price,
+            'stock'=> $request->stock,
+            'umkm_id' => $request->umkm_id,
+        ]);
+
+        // Thumbnail
+        $thumbnail = $request->file('thumbnail');
+        $thumbnailName = time() . '.' . $thumbnail->extension();
+        $thumbnail->move(public_path('storage/UMKM/' . $request->umkm_id . '/product'), $thumbnailName);
+        $product->thumbnail = '/storage/UMKM/' . $request->umkm_id . '/product/' . $thumbnailName;
+        $product->save();
+
+        return redirect()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($umkm)
     {
-        //
+        $umkm = UMKM::findOrFail($umkm);
+        $umkm->delete();
+
+        return redirect()->route('admin.umkm.index')->with('success', 'Data UMKM berhasil dihapus!');
     }
 }
