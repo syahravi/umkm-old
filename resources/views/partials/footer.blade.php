@@ -1,10 +1,8 @@
-<<section class="py-12 bg-gradient-to-r  from-teal-100 to-blue-600">
+<<section class="py-12 bg-emerald-600">
     <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center xl:flex xl:items-center xl:justify-between xl:text-left">
             <div class="xl:flex xl:items-center xl:justify-start">
-                <img class="w-auto mx-auto h-10" src="{{asset('images/umkmm.png')}}" alt="umkm cimulang" />
-
-                <p class="mt-5 text-sm text-dark xl:ml-6 xl:mt-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">© Hak Cipta 2021 Umkm Cimulang</p>
+                <p class="mt-5 text-sm  xl:ml-6 xl:mt-0 text-white">© Hak Cipta 2021 Umkm Cimulang</p>
             </div>
 
             <div class="items-center mt-8 xl:mt-0 xl:flex xl:justify-end xl:space-x-8">
@@ -30,11 +28,9 @@
 
                 <ul class="flex items-center justify-center space-x-8 xl:justify-end">
                     <li>
-                        <a href="#" title="" class="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
-                          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M21.57 6.016c-.213-1.589-.841-2.817-1.924-3.886C18.26.559 15.72.035 12 .035c-3.719 0-6.26.524-7.647 1.095-1.084 1.07-1.712 2.297-1.924 3.886-.16 1.196-.26 3.006-.26 4.914s.1 3.718.26 4.915c.213 1.589.84 2.817 1.924 3.886C5.74 23.441 8.28 23.965 12 23.965c3.719 0 6.26-.524 7.647-1.094 1.084-1.07 1.712-2.297 1.924-3.886.16-1.197.26-3.007.26-4.915s-.1-3.718-.26-4.914zm-10.57 9.446V8.537l6.454 3.465-6.454 3.466z"/>
-                          </svg>
-                        </a>
+                        <a href="https://www.youtube.com/watch?v=NhsPaLbkpes" title="" class="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
+                            <svg class="h-8 w-8 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" /></svg>
+                        </a>                                    
                       </li>                                                                           
                     <li>
                         <a href="#" title="" class="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
@@ -45,7 +41,7 @@
                     </li>
 
                     <li>
-                        <a href="#" title="" class="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
+                        <a href="https://www.instagram.com/kkn.samudera.23/" title="" class="block text-white transition-all duration-200 hover:text-opacity-80 focus:text-opacity-80">
                             <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
                                 <circle cx="16.806" cy="7.207" r="1.078"></circle>

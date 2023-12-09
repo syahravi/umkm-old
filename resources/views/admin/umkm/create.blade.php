@@ -3,9 +3,9 @@
 @section('title', 'Add UMKM')
 
 @section('content')
-    <div class="py-4 bg-blue-500">
+    <div class="py-4 mt-3 rounded-md w-5/12 mx-auto">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="flex justify-end space-x-4">
+            <div class="flex justify-center space-x-4">
                 <a href="{{ route('admin.umkm.index') }}"
                     class="inline-block px-8 py-4 text-base font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-400 focus:ring-4 focus:outline-none focus:ring-blue-400">
                     UMKM List

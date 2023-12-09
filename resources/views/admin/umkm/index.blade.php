@@ -4,7 +4,7 @@
     <div class="container py-8 mx-auto">
         <h1 class="mb-4 text-3xl font-bold text-center md:text-5xl">Daftar UMKM
             <a href="{{ route('admin.umkm.create') }}"
-            class="inline-block px-4 py-2 mb-4 font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
+            class="inline-block px-4 py-2 mb-4 font-medium text-white bg-emerald-500 rounded-lg hover:bg-emerald-600">
             Tambah UMKM
         </a>
         </h1>

@@ -6,7 +6,7 @@
                 <h2 class="w-full font-sans py-3 text-4xl font-black leading-10 tracking-wide text-black sm:text-6xl lg:tex t-7xl">
                     Selamat Datang Di <span class="block font-mono  lg:mt-3">Website UMKM</span>
                     <span
-                        class="block h-24 font-black  font-sans text-transparent lg:mt-3 bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">Desa
+                        class="block h-24 font-black  font-sans text-blue-500 lg:mt-3 0">Desa
                         Cimulang</span>
                 </h2>
                 <p class="my-4 text-lg text-gray-600 ">Website ini adalah sebuah platform digital yang bertujuan
@@ -36,17 +36,17 @@
             <div class="md:w-1/2">
                 <!-- Teks di tengah pada layar mobile -->
                 <h2 class="mb-4 text-3xl font-bold text-center md:text-5xl "> Tentang UMKM di <span
-                        class="mt-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400"> Desa
+                        class="mt-1 text-blue-500"> Desa
                         Cimulang </span>
                 </h2>
-                <p class="w-full text-left text-gray-600 md:text-2xl"> Selamat datang di halaman kami yang didedikasikan
+                <p class="w-full text-center text-gray-600 md:text-2xl"> Selamat datang di halaman kami yang didedikasikan
                     untuk Usaha Mikro, Kecil, dan Menengah UMKM di Desa Cimulang. Kami berkomitmen untuk mendukung
                     pertumbuhan dan perkembangan UMKM lokal agar dapat berkembang dan berkontribusi dalam memajukan
                     perekonomian di wilayah ini. </p>
             </div>
             <!-- Video Container (Right) -->
             <div class="mt-8 md:w-1/2 md:mt-0">
-                <div class="aspect-w-16 aspect-h-9">
+                <div class="aspect-w-16 aspect-h-9 border border-blue-500 border-spacing-2 ">
                         <iframe class="w-full shadow-sm " height="315"  src="https://www.youtube.com/embed/NhsPaLbkpes?si=-Br0D-Kk3cRjlM-B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
@@ -54,9 +54,9 @@
     </section>
     {{-- *Card --}}
     <section id="produk" class="py-10 bg-white">
-        <div class="container mx-auto">
+        <div class="container ">
             <h1
-                class="flex flex-col mb-4 text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 md:flex-row md:items-center">
+                class="flex flex-col mb-10 text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 md:flex-row md:items-center">
                 Daftar UMKM
                 <a href="{{ route('umkm.index')}}"
                     class="flex items-center mx-auto mt-2 text-sm text-blue-500 underline sm:text-center md:mt-0 md:ml-4">
@@ -69,12 +69,12 @@
                     </svg>
                 </a>
             </h1>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 @foreach ($umkms as $umkm)
                     <a href="{{ route('umkm.show', $umkm->id) }}"
-                        class="p-3 transition-transform transform bg-white rounded-lg shadow-md hover:text-white hover:bg-blue-200 hover:-translate-y-2 hover:shadow-lg">
+                        class="p-3 transition-transform transform bg-white rounded-lg shadow-md hover:text-white  hover:-translate-y-2 hover:shadow-lg">
                         <h2 class="mb-2 text-xl font-bold text-center text-gray-800">{{ $umkm->name }}</h2>
-                        <img class="object-cover w-full h-56 mt-4 rounded-t-lg"
+                        <img class="object-cover w-screen h-56 mt-4 rounded-t-lg"
                             src="{{ $umkm->thumbnail }}" alt="UMKM Image">
 
                         <div class="p-4">
@@ -94,12 +94,12 @@
     {{-- form pengaduan --}}
     <section id="hubungikami" class=" container h-auto mx-auto bg-gray-100 ">
         <h1
-            class="p-5 mt-10 mb-4 text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
+            class="p-5 mt-10 mb-4 text-5xl font-extrabold text-center ">
             Hubungi Kami
         </h1>
         <div class="grid w-full grid-cols-1 gap-6 mx-auto mt-12 md:grid-cols-2">
             <!-- Bagian Form -->
-            <div class="p-6 rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-teal-400 ">
+            <div class="p-6 rounded-lg shadow-md bg-blue-500">
                 <form>
                     <!-- Name input -->
                     <div class="mb-6">
@@ -137,14 +137,14 @@
 
                     <!-- Submit button -->
                     <button type="submit"
-                        class="w-full px-4 py-3 mt-6 text-white bg-gray-800 rounded-md hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue">
+                        class="w-full px-4 py-3 mt-6 text-white bg-emerald-400 rounded-md hover:bg-emerald-500 focus:outline-none focus:ring focus:ring-blue">
                         Kirim
                     </button>
                 </form>
             </div>
             <!-- Gambar di Samping -->
             <div class="hidden md:block">
-                <img src="{{ asset('images/Fill out-pana.svg') }}" alt="Gambar Anda"
+                <img src="{{ asset('images/welcome.svg') }}" alt="Gambar Anda"
                     class="object-cover object-center w-full h-full rounded-lg" />
             </div>
         </div>

@@ -2,10 +2,11 @@
     {{-- ha;lamn lending utama --}}
     <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32 ">
         <div class="absolute inset-0">
-            <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left"
-             {{--ambil gambar dari gambar umkm  --}}
-            src="{{ $umkm->thumbnail}}" alt="" />
+            <img class="object-cover w-full h-full"
+                 {{--ambil gambar dari gambar umkm  --}}
+                 src="{{ $umkm->thumbnail }}" alt="" />
         </div>
+        
     
         <div class="absolute inset-0 hidden bg-gradient-to-r md:block from-black to-transparent"></div>
     
@@ -14,7 +15,7 @@
         <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             {{-- @foreach ($umkms as $umkm) --}}
             <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
-                <h2 class="text-3xl  text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400 font-bold leading-tight sm:text-4xl lg:text-5xl">{{ $umkm->name }}</h2>
+                <h2 class="text-3xl  text-blue-500 font-bold leading-tight sm:text-4xl lg:text-5xl">{{ $umkm->name }}</h2>
                 <p class="mt-4 text-base text-gray-200">{{ $umkm->description }} </p>
                 <div class="mt-10 sm:flex sm:items-center sm:space-x-8"> 
                     <button href="#" title="" class=" rounded-md inline-flex items-center justify-center px-10 py-4 text-base font-semibold text-white transition-all duration-200 bg-teal-500 hover:bg-teal-600 focus:bg-teal-600" role="button">
